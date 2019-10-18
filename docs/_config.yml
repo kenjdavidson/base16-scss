@@ -14,7 +14,7 @@ bootwatch: paper
 markdown: kramdown
 highlighter: rouge
 
-remote_theme: aksakalli/jekyll-doc-theme@gh-pages
+remote_theme: kenjdavidson/jekyll-doc-theme
 
 plugins:
   - jekyll-remote-theme
