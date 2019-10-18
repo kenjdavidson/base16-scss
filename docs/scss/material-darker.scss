@@ -1,0 +1,5 @@
+// Import themes and set base6-colors
+@import '../../src/themes/material';
+$base16-colors: $base16-material-darker;
+
+@import "../../src/highlight";

@@ -1,0 +1,352 @@
+/**
+ * Rouge highlight syntax provides as much of a base16 builder as possible as defined
+ * by https://github.com/chriskempson/base16/blob/master/builder.md
+ *
+ * It requires that the $base16 map has been populated/overridden prior to importing
+ * the this file.  For example, the following should be completed:
+ *
+ * $base16 = ()	// new overrides for base16 colors 
+ * @import "rouge-highlight-scss/syntax.scss"
+ *
+ * At this point all the variables should be created for usage as well as the highlight
+ * and highlighter-rouge classes defined.
+ */
+/**
+ * Rouge highlight colours are defined using the Base16 guidelines found at 
+ * https://github.com/chriskempson/base16/blob/master/styling.md
+ *
+ * Notice that the colours do not have a numeric symbol, this is to allow
+ * quick copy paste/override from any of the sample scheme files located
+ * at https://github.com/chriskempson/base16
+ */
+/**
+ * Required variable creation based on builder specification
+ * https://github.com/chriskempson/base16/blob/master/builder.md
+ */
+:root {
+  --base00: #181818;
+  --base01: #282828;
+  --base02: #383838;
+  --base03: #585858;
+  --base04: #b8b8b8;
+  --base05: #d8d8d8;
+  --base06: #e8e8e8;
+  --base07: #f8f8f8;
+  --base08: #ab4642;
+  --base09: #dc9656;
+  --base0A: #f7ca88;
+  --base0B: #a1b56c;
+  --base0C: #86c1b9;
+  --base0D: #7cafc2;
+  --base0E: #ba8baf;
+  --base0F: #a16946;
+}
+
+.highlight {
+  color: var(--base05);
+  background-color: var(--base01);
+  /* Comment */
+  /* Error */
+  /* Keyword */
+  /* Operator */
+  /* Comment.Hashbang */
+  /* Comment.Multiline */
+  /* Comment.Preproc */
+  /* Comment.PreprocFile */
+  /* Comment.Single */
+  /* Comment.Special */
+  /* Generic.Deleted */
+  /* Generic.Emph */
+  /* Generic.Error */
+  /* Generic.Heading */
+  /* Generic.Inserted */
+  /* Generic.Output */
+  /* Generic.Prompt */
+  /* Generic.Strong */
+  /* Generic.Subheading */
+  /* Generic.Traceback */
+  /* Keyword.Constant */
+  /* Keyword.Declaration */
+  /* Keyword.Namespace */
+  /* Keyword.Pseudo */
+  /* Keyword.Reserved */
+  /* Keyword.Type */
+  /* Literal.Number */
+  /* Literal.String */
+  /* Name.Attribute */
+  /* Name.Builtin */
+  /* Name.Class */
+  /* Name.Constant */
+  /* Name.Decorator */
+  /* Name.Entity */
+  /* Name.Exception */
+  /* Name.Function */
+  /* Name.Label */
+  /* Name.Namespace */
+  /* Name.Tag */
+  /* Name.Variable */
+  /* Operator.Word */
+  /* Text.Whitespace */
+  /* Literal.Number.Bin */
+  /* Literal.Number.Float */
+  /* Literal.Number.Hex */
+  /* Literal.Number.Integer */
+  /* Literal.Number.Oct */
+  /* Literal.String.Affix */
+  /* Literal.String.Backtick */
+  /* Literal.String.Char */
+  /* Literal.String.Delimiter */
+  /* Literal.String.Doc */
+  /* Literal.String.Double */
+  /* Literal.String.Escape */
+  /* Literal.String.Heredoc */
+  /* Literal.String.Interpol */
+  /* Literal.String.Other */
+  /* Literal.String.Regex */
+  /* Literal.String.Single */
+  /* Literal.String.Symbol */
+  /* Name.Builtin.Pseudo */
+  /* Name.Function.Magic */
+  /* Name.Variable.Class */
+  /* Name.Variable.Global */
+  /* Name.Variable.Instance */
+  /* Name.Variable.Magic */
+  /* Literal.Number.Integer.Long */
+}
+.highlight .hll {
+  background-color: var(--base02);
+}
+.highlight .c {
+  color: var(--base03);
+  font-style: italic;
+}
+.highlight .err {
+  border: 1px solid var(--base0F);
+}
+.highlight .k {
+  color: var(--base0E);
+  font-weight: bold;
+}
+.highlight .o {
+  color: var(--base0E);
+  font-weight: bold;
+}
+.highlight .ch {
+  color: var(--base03);
+  font-style: italic;
+}
+.highlight .cm {
+  color: var(--base03);
+  font-style: italic;
+}
+.highlight .cp {
+  color: var(--base0E);
+}
+.highlight .cpf {
+  color: var(--base03);
+  font-style: italic;
+}
+.highlight .c1 {
+  color: var(--base03);
+  font-style: italic;
+}
+.highlight .cs {
+  color: var(--base03);
+  background-color: #fff0f0;
+}
+.highlight .gd {
+  color: var(--base0F);
+}
+.highlight .ge {
+  font-style: italic;
+}
+.highlight .gr {
+  color: var(--base0F);
+}
+.highlight .gh {
+  color: var(--base0D);
+  font-weight: bold;
+}
+.highlight .gi {
+  color: var(--base0D);
+}
+.highlight .go {
+  color: var(--base0D);
+}
+.highlight .gp {
+  color: var(--base0C);
+  font-weight: bold;
+}
+.highlight .gs {
+  font-weight: bold;
+}
+.highlight .gu {
+  color: var(--base0D);
+  font-weight: bold;
+}
+.highlight .gt {
+  color: var(--base0D);
+}
+.highlight .kc {
+  color: var(--base0E);
+  font-weight: bold;
+}
+.highlight .kd {
+  color: var(--base0E);
+  font-weight: bold;
+}
+.highlight .kn {
+  color: var(--base0E);
+  font-weight: bold;
+}
+.highlight .kp {
+  color: var(--base0E);
+}
+.highlight .kr {
+  color: var(--base0E);
+  font-weight: bold;
+}
+.highlight .kt {
+  color: var(--base0E);
+}
+.highlight .m {
+  color: var(--base09);
+}
+.highlight .s {
+  color: var(--base0B);
+}
+.highlight .na {
+  color: var(--base0B);
+}
+.highlight .nb {
+  color: var(--base0E);
+}
+.highlight .nc {
+  color: var(--base0D);
+  font-weight: bold;
+}
+.highlight .no {
+  color: var(--base0D);
+}
+.highlight .nd {
+  color: var(--base0D);
+  font-weight: bold;
+}
+.highlight .ni {
+  color: var(--base0D);
+  font-weight: bold;
+}
+.highlight .ne {
+  color: var(--base0E);
+}
+.highlight .nf {
+  color: var(--base0C);
+}
+.highlight .nl {
+  color: var(--base0D);
+  font-weight: bold;
+}
+.highlight .nn {
+  color: var(--base0D);
+  font-weight: bold;
+}
+.highlight .nt {
+  color: var(--base0D);
+  font-weight: bold;
+}
+.highlight .nv {
+  color: var(--base0D);
+}
+.highlight .ow {
+  color: var(--base0E);
+  font-weight: bold;
+}
+.highlight .mb {
+  color: var(--base09);
+}
+.highlight .mf {
+  color: var(--base09);
+}
+.highlight .mh {
+  color: var(--base09);
+}
+.highlight .mi {
+  color: var(--base09);
+}
+.highlight .mo {
+  color: var(--base09);
+}
+.highlight .sa {
+  color: var(--base0B);
+}
+.highlight .sb {
+  color: var(--base0B);
+}
+.highlight .sc {
+  color: var(--base0B);
+}
+.highlight .dl {
+  color: var(--base0B);
+}
+.highlight .sd {
+  color: var(--base0B);
+  font-style: italic;
+}
+.highlight .s2 {
+  color: var(--base0B);
+}
+.highlight .se {
+  color: var(--base0B);
+  font-weight: bold;
+}
+.highlight .sh {
+  color: var(--base0B);
+}
+.highlight .si {
+  color: var(--base0C);
+  font-style: italic;
+}
+.highlight .sx {
+  color: var(--base0C);
+}
+.highlight .sr {
+  color: var(--base0C);
+}
+.highlight .s1 {
+  color: var(--base0B);
+}
+.highlight .ss {
+  color: var(--base0C);
+}
+.highlight .bp {
+  color: var(--base0E);
+}
+.highlight .fm {
+  color: var(--base0C);
+}
+.highlight .vc {
+  color: var(--base0D);
+}
+.highlight .vg {
+  color: var(--base0D);
+}
+.highlight .vi {
+  color: var(--base0D);
+}
+.highlight .vm {
+  color: var(--base0D);
+}
+.highlight .il {
+  color: var(--base09);
+}
+
+/**
+ * Inline routing defined using `single ticks` will be displayed in Jekyll with a 
+ * highlighter-rouge class.
+ */
+.highlighter-rouge {
+  background-color: var(--base01);
+  padding: 2px 0px;
+}
+
+/*# sourceMappingURL=highlight.css.map */

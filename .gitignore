@@ -1,0 +1,6 @@
+# IDE Files
+.project
+.classpath
+
+# Build
+node_modules/
