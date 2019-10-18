@@ -6,7 +6,7 @@ title: Rouge Highlight Base16 SCSS
 url: http://kenjdavidson.github.io/rouge-base16-scss
 baseurl: /rouge-base16-scss
 
-remote_theme: aksakalli/jekyll-doc-theme
+remote_theme: aksakalli/jekyll-doc-theme@gh-pages
 highlighter: rouge
 
 plugins:
