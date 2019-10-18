@@ -2,11 +2,16 @@
 author: Ken Davidson
 email: ken.j.davidson@live.ca
 title: Rouge Highlight Base16 SCSS
+
 url: http://kenjdavidson.github.io/rouge-base16-scss
+baseurl: /rouge-base16-scss
 
 remote_theme: aksakalli/jekyll-doc-theme
 highlighter: rouge
 
-baseurl: /rouge-base16-scss
+plugins:
+  - jekyll-remote-theme
+
 lsi: false
 exclude: [LICENSE, CNAME, README.md, .gitignore, Gemfile, Gemfile.lock]
+excerpt_separator: <!--more-->
