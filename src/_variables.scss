@@ -3,51 +3,37 @@
  * https://github.com/chriskempson/base16/blob/master/builder.md
  */ 
  
-$base00-hex-r: str-slice(map-get($base16-colors, base00), 1, 2);
-$base00-hex-g: str-slice(map-get($base16-colors, base00), 3, 4);
-$base00-hex-b: str-slice(map-get($base16-colors, base00), 5, 6);
-$base01-hex-r: str-slice(map-get($base16-colors, base01), 1, 2);
-$base01-hex-g: str-slice(map-get($base16-colors, base01), 3, 4);
-$base01-hex-b: str-slice(map-get($base16-colors, base01), 5, 6);
-$base02-hex-r: str-slice(map-get($base16-colors, base02), 1, 2);
-$base02-hex-g: str-slice(map-get($base16-colors, base02), 3, 4);
-$base02-hex-b: str-slice(map-get($base16-colors, base02), 5, 6);
-$base03-hex-r: str-slice(map-get($base16-colors, base03), 1, 2);
-$base03-hex-g: str-slice(map-get($base16-colors, base03), 3, 4);
-$base03-hex-b: str-slice(map-get($base16-colors, base03), 5, 6);
-$base04-hex-r: str-slice(map-get($base16-colors, base04), 1, 2);
-$base04-hex-g: str-slice(map-get($base16-colors, base04), 3, 4);
-$base04-hex-b: str-slice(map-get($base16-colors, base04), 5, 6);
-$base05-hex-r: str-slice(map-get($base16-colors, base05), 1, 2);
-$base05-hex-g: str-slice(map-get($base16-colors, base05), 3, 4);
-$base05-hex-b: str-slice(map-get($base16-colors, base05), 5, 6);
-$base06-hex-r: str-slice(map-get($base16-colors, base06), 1, 2);
-$base06-hex-g: str-slice(map-get($base16-colors, base06), 3, 4);
-$base06-hex-b: str-slice(map-get($base16-colors, base06), 5, 6);
-$base07-hex-r: str-slice(map-get($base16-colors, base07), 1, 2);
-$base07-hex-g: str-slice(map-get($base16-colors, base07), 3, 4);
-$base07-hex-b: str-slice(map-get($base16-colors, base07), 5, 6);
-$base08-hex-r: str-slice(map-get($base16-colors, base08), 1, 2);
-$base08-hex-g: str-slice(map-get($base16-colors, base08), 3, 4);
-$base08-hex-b: str-slice(map-get($base16-colors, base08), 5, 6);
-$base09-hex-r: str-slice(map-get($base16-colors, base09), 1, 2);
-$base09-hex-g: str-slice(map-get($base16-colors, base09), 3, 4);
-$base09-hex-b: str-slice(map-get($base16-colors, base09), 5, 6);
-$base0A-hex-r: str-slice(map-get($base16-colors, base0A), 1, 2);
-$base0A-hex-g: str-slice(map-get($base16-colors, base0A), 3, 4);
-$base0A-hex-b: str-slice(map-get($base16-colors, base0A), 5, 6);
-$base0B-hex-r: str-slice(map-get($base16-colors, base0B), 1, 2);
-$base0B-hex-g: str-slice(map-get($base16-colors, base0B), 3, 4);
-$base0B-hex-b: str-slice(map-get($base16-colors, base0B), 5, 6);
-$base0C-hex-r: str-slice(map-get($base16-colors, base0C), 1, 2);
-$base0C-hex-g: str-slice(map-get($base16-colors, base0C), 3, 4);
-$base0C-hex-b: str-slice(map-get($base16-colors, base0C), 5, 6);
-$base0D-hex-r: str-slice(map-get($base16-colors, base0D), 1, 2);
-$base0D-hex-g: str-slice(map-get($base16-colors, base0D), 3, 4);
-$base0D-hex-b: str-slice(map-get($base16-colors, base0D), 5, 6);
-$base0E-hex-r: str-slice(map-get($base16-colors, base0E), 1, 2);
-$base0E-hex-g: str-slice(map-get($base16-colors, base0E), 3, 4);
-$base0E-hex-b: str-slice(map-get($base16-colors, base0E), 5, 6);
-$base0F-hex-r: str-slice(map-get($base16-colors, base0F), 1, 2);
-$base0F-hex-g: str-slice(map-get($base16-colors, base0F), 3, 4);
-$base0F-hex-b: str-slice(map-get($base16-colors, base0F), 5, 6);
+/**
+ * Add all extra variables to provided $colormap.
+ */
+@function add-color-vars($colormap) {
+  @each $name,$color in $colormap {
+    $colormap = map-merge($colormap, (
+      #{$name}-hex-r: str-slice($color, 1, 2),
+      #{$name}-hex-g: str-slice($color, 3, 4),
+      #{$name}-hex-b: str-slice($color, 5, 6)
+    );
+    $colormap = map-merge($colormap, (
+      #{$name}-rgb-r: hex-to-rgb(map-get($colormap, #{$name}-hex-r)),
+      #{$name}-rgb-g: hex-to-rgb(map-get($colormap, #{$name}-hex-g)),
+      #{$name}-rgb-b: hex-to-rgb(map-get($colormap, #{$name}-hex-b))
+    ));
+  }  
+  return $colormap;
+}
+
+/**
+ * Convert hex value to rgb (integer).
+ */
+@function hex-to-rgb($hex) {
+  $chars = '0123456789ABCDEF';
+  $dec = 0;
+  
+  @for $i from 0 through string.length($hex) {
+    $val = string.substring($hex, $i+1, $i+2);
+    $index = string.index($chars, $val);
+    $dec = ($i * 16) + $dec;
+  }
+  
+  return $dec;
+}
