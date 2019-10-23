@@ -26,13 +26,14 @@
  * Convert hex value to rgb (integer).
  */
 @function hex-to-rgb($hex) {
-  $chars = '0123456789ABCDEF';
+  $digits = '0123456789ABCDEF';
+  $hex = string.to-upper-case($hex);
   $dec = 0;
   
-  @for $i from 0 through string.length($hex) {
-    $val = string.substring($hex, $i+1, $i+2);
-    $index = string.index($chars, $val);
-    $dec = ($i * 16) + $dec;
+  @for $i from 1 through string.length($hex) {
+    $digit = string.substring($hex, $i, $i);
+    $val = string.index($digits, $digit)-1;
+    $dec = 16*$dec + $val;
   }
   
   return $dec;
