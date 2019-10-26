@@ -5,3 +5,8 @@
 # Build
 node_modules/
 _site/
+
+# Jekyll
+_site
+.sass-cache
+.jekyll-metadata

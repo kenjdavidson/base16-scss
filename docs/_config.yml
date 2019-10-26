@@ -1,56 +1,41 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
 # Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
 title: Rouge Base16 Scss
 email: ken.j.davidson@live.ca
-description: >
-  Provides scss customization of Rouge highlight themes based upon
-  the Base16 architecture.
-lang: en-US
-
-baseurl: "/rouge-base16-scss" # the subpath of your site, e.g. /blog/
-url: https://kenjdavidson.github.io/rouge-base16-scss # the base hostname & protocol for your site
-git_address: https://github.com/kenjdavidson/rouge-base16-scss
-
-# theme options from https://bootswatch.com/
-# comment out this to use default Bootstrap
-bootwatch: paper
+description: >- # this means to ignore newlines until "baseurl:"
+  Provide Rouge css theme(s) based on the Base16 architecture through the use of 
+  scss.
+baseurl: "/rouge-base16-scss" # the subpath of your site, e.g. /blog
+url: "https://kenjdavidson.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+github_username:  kenjdavidson
+git_address: https://github.com/kenjdavidson/jekyll-doc-theme
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
-gems:
+remote_theme: kenjdavidson/jekyll-doc-theme
+bootwatch: Yeti
+plugins:
   - jekyll-feed
   - jekyll-redirect-from
   - jekyll-seo-tag
   - jekyll-sitemap
 
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - .idea/
-  - .gitignore
-  - README.md
-timezone: Europe/Berlin
-defaults:
-- scope:
-    path: _posts
-    type: posts
-  values:
-    layout: post
-    sectionid: blog
+# Include 
+include: ['./']
 
-- scope:
-    path: _docs
-    type: docs
-  values:
-    layout: docs
-    sectionid: docs
-    seo:
-      type: "WebPage"
-
-collections:
-  docs:
-    permalink: /:collection/:path/
-    output: true
-  posts:
-    permalink: /blog/:year/:month/:day/:title/
-    output: true
+# Exclude from processing.
+exclude: ['Gemfile','Gemfile.log','node_modules']
