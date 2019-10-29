@@ -22,6 +22,14 @@ module.exports = function(grunt) {
           './dist/highlight.min.css': './dist/highlight.css'
         }
       }
+    },
+    copy: {
+      main: {
+        expand: true,
+        cwd: 'src',
+        src: '**',
+        dest: 'docs/_sass/rouge-base16-scss'
+      }
     }
   });
 
@@ -29,8 +37,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
   // Default task(s).
-  grunt.registerTask('default', ['sass', 'cssmin']);
+  grunt.registerTask('default', ['sass', 'cssmin', 'copy']);
 
 };

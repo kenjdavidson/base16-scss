@@ -4,6 +4,7 @@ layout: default
 
 <div class="container">
   <h1>Java</h1>
+  <div id="java-code">
 {%- highlight java -%}
 public class UserServiceImpl implements UserService {
   @Inject SqlSession sqlSession;
@@ -16,17 +17,22 @@ public class UserServiceImpl implements UserService {
     }
 }  
 {%- endhighlight -%}
-  
+  </div>  
+
   <h1>HTML</h1>
+  <div id="html-code">
 {%- highlight html -%}
         code
 {%- endhighlight -%}
-  
+  </div>
+
   <h1>JavaScript</h1>
+  <div id="javascript-code">
 {%- highlight javascript -%}
 angular.module('UserModule', [])
   .service('UserService', [function(){
 
   }]);
 {%- endhighlight -%}
-</div>
+  </div>
+</div> <!-- container -->

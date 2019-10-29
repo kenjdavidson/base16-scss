@@ -1,0 +1,39 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+
+@import
+{% if site.bootwatch %}
+  "bootswatch/{{site.bootwatch | downcase}}/variables",
+{% endif %}
+
+"bootstrap",
+
+{% if site.bootwatch %}
+  "bootswatch/{{site.bootwatch | downcase}}/bootswatch",
+{% endif %}
+
+"syntax-highlighting",
+"typeahead"
+;
+
+@import "_site";
+
+/**
+ * Rouge-Base16-Scss
+ */
+@import "rouge-base16-scss/themes/base16";
+@import "rouge-base16-scss/themes/github";
+@import "rouge-base16-scss/themes/material";
+
+$base16-scheme: $base16-github;
+@import "rouge-base16-scss/highlight";
+
+$base16-light: apply-color-vars($base16-light);
+@include build-base16-scheme('#html-code', $base16-light);
+
+$base16-mocha: apply-color-vars($base16-mocha);
+@include build-base16-scheme('#javascript-code', $base16-mocha);
