@@ -2,8 +2,16 @@
 layout: default
 ---
 
+<div class="header-container jumbotron">
+  <div class="container">
+      <h1>Scss builder for Base16 themes</h1>
+      <p>Easy to use library providing the Base16 themes to your website through Scss or Css variables.</p>
+      <p><a class="btn btn-primary btn-lg" href="{{ "/docs/home/" | prepend: site.baseurl }}" role="button">Learn more</a></p>
+  </div>
+</div>
+
 <div class="container">
-  <h1>Java</h1>
+  <h2>Java</h2>
   <div id="java-code">
 {%- highlight java -%}
 public class UserServiceImpl implements UserService {
@@ -19,14 +27,14 @@ public class UserServiceImpl implements UserService {
 {%- endhighlight -%}
   </div>  
 
-  <h1>HTML</h1>
+  <h2>HTML</h2>
   <div id="html-code">
 {%- highlight html -%}
         code
 {%- endhighlight -%}
   </div>
 
-  <h1>JavaScript</h1>
+  <h2>JavaScript</h2>
   <div id="javascript-code">
 {%- highlight javascript -%}
 angular.module('UserModule', [])

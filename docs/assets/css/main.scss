@@ -22,6 +22,11 @@
 
 @import "_site";
 
+// Override some items
+.header-container {
+  background: $navbar-default-bg;
+}
+
 /**
  * Rouge-Base16-Scss
  */

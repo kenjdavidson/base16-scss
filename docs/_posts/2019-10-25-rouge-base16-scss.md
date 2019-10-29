@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Rouge templates with Base16 and Scss"
+title:  "Base16 Scss Builder/Samples"
 date:   2019-10-25 20:09:11 -0400
 categories: jekyll update
 ---
