@@ -13,26 +13,10 @@
  */ 
 
 @import "_defaults";
-@import "_variables";
+@import "_helpers";
 
-:root {
-	--base00: ##{map-get($base16-colors, base00)};
-	--base01: ##{map-get($base16-colors, base01)};
-	--base02: ##{map-get($base16-colors, base02)};
-	--base03: ##{map-get($base16-colors, base03)};
-	--base04: ##{map-get($base16-colors, base04)};
-	--base05: ##{map-get($base16-colors, base05)};
-	--base06: ##{map-get($base16-colors, base06)};
-	--base07: ##{map-get($base16-colors, base07)};
-	--base08: ##{map-get($base16-colors, base08)};
-	--base09: ##{map-get($base16-colors, base09)};
-	--base0A: ##{map-get($base16-colors, base0A)};
-	--base0B: ##{map-get($base16-colors, base0B)};
-	--base0C: ##{map-get($base16-colors, base0C)};
-	--base0D: ##{map-get($base16-colors, base0D)};
-	--base0E: ##{map-get($base16-colors, base0E)};
-	--base0F: ##{map-get($base16-colors, base0F)};
-}
+$base16-scheme: apply-color-vars($base16-scheme);
+@include apply-scheme(':root', $base16-scheme);
 
 .highlight {
 	color: var(--base05);

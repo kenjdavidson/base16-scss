@@ -26,7 +26,7 @@ git_address: https://github.com/kenjdavidson/jekyll-doc-theme
 # Build settings
 markdown: kramdown
 highlighter: rouge
-remote_theme: kenjdavidson/jekyll-doc-theme
+remote_theme: kenjdavidson/jekyll-doc-theme@gh-pages
 bootwatch: Yeti
 plugins:
   - jekyll-feed

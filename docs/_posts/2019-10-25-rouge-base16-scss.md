@@ -6,6 +6,12 @@ categories: jekyll update
 ---
 After playing around with [Github Pages][jekyll-gh] and [Jekyll][jekyll-docs] I started to find that the ones that I was a fan of were pretty static in their configuration, mainly with regards to the CSS frameworks that were chosen and their lack of [SCSS][scss].  My goal was to replicate the [swanson/lagom][lagom] theme to use Sierra, following the rabbit hole a little futher I started playing with the [Rouge][rouge] highlighter and it's customization.  A little bit further down and I realized the Base16 guidelines would be perfect for running full sites (not just highlighting) - since I couldn't find any while working on my Jekyll theme, I figured I'd take a few days to implement it.
 
+**Edit 19/10/23** after looking around a little more I found a couple of sass projects based on Base16, which are available to be imported into this, without any issue and provide a substantial number of schemes.
+
+- [https://github.com/samme/base16-styles](https://github.com/tajmone/Base16-Sass)
+- [https://github.com/tajmone/Base16-Sass](https://github.com/tajmone/Base16-Sass)
+
+
 Here's a quick rundown of how things were planned out, for more info check out the [docs]({{ site.baseurl }}/docs).
 
 ## [Base16](#base16)
