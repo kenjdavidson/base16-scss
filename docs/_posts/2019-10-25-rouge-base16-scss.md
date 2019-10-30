@@ -8,9 +8,26 @@ After playing around with [Github Pages][jekyll-gh] and [Jekyll][jekyll-docs] I 
 
 **Edit 19/10/23** after looking around a little more I found a couple of sass projects based on Base16, which are available to be imported into this, without any issue and provide a substantial number of schemes.
 
-- [https://github.com/samme/base16-styles](https://github.com/tajmone/Base16-Sass)
+- [https://github.com/samme/base16-styles](https://github.com/samme/base16-styles)
 - [https://github.com/tajmone/Base16-Sass](https://github.com/tajmone/Base16-Sass)
 
+Each of which can be imported into this project and used by creating the appropriate `$base16-scheme: ()` from the selected variables.  For example the following can be done:
+
+{% highlight scss%}
+
+import "../../Base16-Sass/scss-named/_base16-atelier-dune"
+$base16-scheme: (
+  base00: $Atelier-Dune-00,
+	base01: $Atelier-Dune-01,
+	...
+);
+import "../../base16-scss/src/highlight";
+{% endhighligt %}
+
+at which point:
+
+- All Base16 defined variables will be available in `$base16-scheme`
+- `:root {}` will have been created
 
 Here's a quick rundown of how things were planned out, for more info check out the [docs]({{ site.baseurl }}/docs).
 
