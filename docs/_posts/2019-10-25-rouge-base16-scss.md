@@ -14,7 +14,6 @@ After playing around with [Github Pages][jekyll-gh] and [Jekyll][jekyll-docs] I 
 Each of which can be imported into this project and used by creating the appropriate `$base16-scheme: ()` from the selected variables.  For example the following can be done:
 
 {% highlight scss%}
-
 import "../../Base16-Sass/scss-named/_base16-atelier-dune"
 $base16-scheme: (
   base00: $Atelier-Dune-00,
@@ -22,7 +21,7 @@ $base16-scheme: (
 	...
 );
 import "../../base16-scss/src/highlight";
-{% endhighligt %}
+{% endhighlight %}
 
 at which point:
 
