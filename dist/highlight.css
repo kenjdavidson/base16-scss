@@ -231,7 +231,7 @@
   --base0F-dec-g: 0.4117647059;
   --base0F-dec-b: 0.2745098039; }
 
-.highlight {
+figure.highlight {
   color: var(--base05);
   background-color: var(--base01);
   /* Comment */
@@ -262,6 +262,7 @@
   /* Keyword.Type */
   /* Literal.Number */
   /* Literal.String */
+  /* Name */
   /* Name.Attribute */
   /* Name.Builtin */
   /* Name.Class */
@@ -301,164 +302,169 @@
   /* Name.Variable.Instance */
   /* Name.Variable.Magic */
   /* Literal.Number.Integer.Long */ }
-  .highlight .hll {
+  figure.highlight pre {
+    color: var(--base05);
+    background-color: var(--base01); }
+  figure.highlight .hll {
     background-color: var(--base02); }
-  .highlight .c {
+  figure.highlight .c {
     color: var(--base03);
     font-style: italic; }
-  .highlight .err {
+  figure.highlight .err {
     border: 1px solid var(--base0F); }
-  .highlight .k {
+  figure.highlight .k {
     color: var(--base0E);
     font-weight: bold; }
-  .highlight .o {
+  figure.highlight .o {
     color: var(--base0E);
     font-weight: bold; }
-  .highlight .ch {
+  figure.highlight .ch {
     color: var(--base03);
     font-style: italic; }
-  .highlight .cm {
+  figure.highlight .cm {
     color: var(--base03);
     font-style: italic; }
-  .highlight .cp {
+  figure.highlight .cp {
     color: var(--base0E); }
-  .highlight .cpf {
+  figure.highlight .cpf {
     color: var(--base03);
     font-style: italic; }
-  .highlight .c1 {
+  figure.highlight .c1 {
     color: var(--base03);
     font-style: italic; }
-  .highlight .cs {
+  figure.highlight .cs {
     color: var(--base03);
     background-color: #fff0f0; }
-  .highlight .gd {
+  figure.highlight .gd {
     color: var(--base0F); }
-  .highlight .ge {
+  figure.highlight .ge {
     font-style: italic; }
-  .highlight .gr {
+  figure.highlight .gr {
     color: var(--base0F); }
-  .highlight .gh {
+  figure.highlight .gh {
     color: var(--base0D);
     font-weight: bold; }
-  .highlight .gi {
+  figure.highlight .gi {
     color: var(--base0D); }
-  .highlight .go {
+  figure.highlight .go {
     color: var(--base0D); }
-  .highlight .gp {
+  figure.highlight .gp {
     color: var(--base0C);
     font-weight: bold; }
-  .highlight .gs {
+  figure.highlight .gs {
     font-weight: bold; }
-  .highlight .gu {
+  figure.highlight .gu {
     color: var(--base0D);
     font-weight: bold; }
-  .highlight .gt {
+  figure.highlight .gt {
     color: var(--base0D); }
-  .highlight .kc {
-    color: var(--base0E);
+  figure.highlight .kc {
+    color: var(--base0A);
     font-weight: bold; }
-  .highlight .kd {
-    color: var(--base0E);
+  figure.highlight .kd {
+    color: var(--base0A);
     font-weight: bold; }
-  .highlight .kn {
-    color: var(--base0E);
+  figure.highlight .kn {
+    color: var(--base0A);
     font-weight: bold; }
-  .highlight .kp {
+  figure.highlight .kp {
     color: var(--base0E); }
-  .highlight .kr {
+  figure.highlight .kr {
     color: var(--base0E);
     font-weight: bold; }
-  .highlight .kt {
+  figure.highlight .kt {
     color: var(--base0E); }
-  .highlight .m {
+  figure.highlight .m {
     color: var(--base09); }
-  .highlight .s {
+  figure.highlight .s {
     color: var(--base0B); }
-  .highlight .na {
+  figure.highlight .n {
+    color: var(--base08); }
+  figure.highlight .na {
     color: var(--base0B); }
-  .highlight .nb {
-    color: var(--base0E); }
-  .highlight .nc {
-    color: var(--base0D);
-    font-weight: bold; }
-  .highlight .no {
+  figure.highlight .nb {
     color: var(--base0D); }
-  .highlight .nd {
-    color: var(--base0D);
-    font-weight: bold; }
-  .highlight .ni {
-    color: var(--base0D);
-    font-weight: bold; }
-  .highlight .ne {
-    color: var(--base0E); }
-  .highlight .nf {
-    color: var(--base0C); }
-  .highlight .nl {
-    color: var(--base0D);
-    font-weight: bold; }
-  .highlight .nn {
-    color: var(--base0D);
-    font-weight: bold; }
-  .highlight .nt {
-    color: var(--base0D);
-    font-weight: bold; }
-  .highlight .nv {
-    color: var(--base0D); }
-  .highlight .ow {
+  figure.highlight .nc {
     color: var(--base0E);
     font-weight: bold; }
-  .highlight .mb {
+  figure.highlight .no {
+    color: var(--base0A); }
+  figure.highlight .nd {
+    color: var(--base0D);
+    font-weight: bold; }
+  figure.highlight .ni {
+    color: var(--base0D);
+    font-weight: bold; }
+  figure.highlight .ne {
+    color: var(--base0E); }
+  figure.highlight .nf {
+    color: var(--base0D); }
+  figure.highlight .nl {
+    color: var(--base0D);
+    font-weight: bold; }
+  figure.highlight .nn {
+    color: var(--base0D);
+    font-weight: bold; }
+  figure.highlight .nt {
+    color: var(--base0D);
+    font-weight: bold; }
+  figure.highlight .nv {
+    color: var(--base0D); }
+  figure.highlight .ow {
+    color: var(--base0E);
+    font-weight: bold; }
+  figure.highlight .mb {
     color: var(--base09); }
-  .highlight .mf {
+  figure.highlight .mf {
     color: var(--base09); }
-  .highlight .mh {
+  figure.highlight .mh {
     color: var(--base09); }
-  .highlight .mi {
+  figure.highlight .mi {
     color: var(--base09); }
-  .highlight .mo {
+  figure.highlight .mo {
     color: var(--base09); }
-  .highlight .sa {
+  figure.highlight .sa {
     color: var(--base0B); }
-  .highlight .sb {
+  figure.highlight .sb {
     color: var(--base0B); }
-  .highlight .sc {
+  figure.highlight .sc {
     color: var(--base0B); }
-  .highlight .dl {
+  figure.highlight .dl {
     color: var(--base0B); }
-  .highlight .sd {
+  figure.highlight .sd {
     color: var(--base0B);
     font-style: italic; }
-  .highlight .s2 {
+  figure.highlight .s2 {
     color: var(--base0B); }
-  .highlight .se {
+  figure.highlight .se {
     color: var(--base0B);
     font-weight: bold; }
-  .highlight .sh {
+  figure.highlight .sh {
     color: var(--base0B); }
-  .highlight .si {
+  figure.highlight .si {
     color: var(--base0C);
     font-style: italic; }
-  .highlight .sx {
+  figure.highlight .sx {
     color: var(--base0C); }
-  .highlight .sr {
+  figure.highlight .sr {
     color: var(--base0C); }
-  .highlight .s1 {
+  figure.highlight .s1 {
     color: var(--base0B); }
-  .highlight .ss {
-    color: var(--base0C); }
-  .highlight .bp {
+  figure.highlight .ss {
+    color: var(--base0B); }
+  figure.highlight .bp {
     color: var(--base0E); }
-  .highlight .fm {
+  figure.highlight .fm {
     color: var(--base0C); }
-  .highlight .vc {
+  figure.highlight .vc {
+    color: var(--base08); }
+  figure.highlight .vg {
+    color: var(--base08); }
+  figure.highlight .vi {
+    color: var(--base08); }
+  figure.highlight .vm {
     color: var(--base0D); }
-  .highlight .vg {
-    color: var(--base0D); }
-  .highlight .vi {
-    color: var(--base0D); }
-  .highlight .vm {
-    color: var(--base0D); }
-  .highlight .il {
+  figure.highlight .il {
     color: var(--base09); }
 
 /**

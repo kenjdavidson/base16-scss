@@ -3,7 +3,10 @@
 ---
 @charset "utf-8";
 
-// Import partials from `sass_dir` (defaults to `_sass`)
+// Bootstrap variable overrides
+$grid-gutter-width:         30px !default;
+$container-desktop:            (900px + $grid-gutter-width) !default;
+$container-large-desktop:      (900px + $grid-gutter-width) !default;
 
 @import
 {% if site.bootwatch %}
@@ -20,6 +23,7 @@
 "typeahead"
 ;
 
+// Import standard Jekyll-doc-theme scss
 @import "_site";
 
 // Override some items
@@ -37,8 +41,39 @@
 $base16-scheme: $base16-github;
 @import "rouge-base16-scss/highlight";
 
+$base16-eighties: apply-color-vars($base16-eighties);
+@include build-base16-scheme('#base16-eighties', $base16-eighties);
+
+$base16-dark: apply-color-vars($base16-dark);
+@include build-base16-scheme('#base16-dark', $base16-dark);
+
 $base16-light: apply-color-vars($base16-light);
-@include build-base16-scheme('#html-code', $base16-light);
+@include build-base16-scheme('#base16-light', $base16-light);
+
+$base16-ocean: apply-color-vars($base16-ocean);
+@include build-base16-scheme('#base16-ocean', $base16-ocean);
 
 $base16-mocha: apply-color-vars($base16-mocha);
-@include build-base16-scheme('#javascript-code', $base16-mocha);
+@include build-base16-scheme('#base16-mocha', $base16-mocha);
+
+$base16-cupertino: (
+  base00: "ffffff", 
+  base01: "c0c0c0",
+  base02: "c0c0c0",
+  base03: "808080",
+  base04: "808080",
+  base05: "404040",
+  base06: "404040",
+  base07: "5e5e5e", 
+  base08: "c41a15", 
+  base09: "eb8500", 
+  base0A: "826b28", 
+  base0B: "007400", 
+  base0C: "318495", 
+  base0D: "0000ff", 
+  base0E: "a90d91", 
+  base0F: "826b28" 
+);
+
+$base16-cupertino: apply-color-vars($base16-cupertino);
+@include build-base16-scheme('#base16-cupertino', $base16-cupertino);
