@@ -17,8 +17,8 @@ Each of which can be imported into this project and used by creating the appropr
 import "Base16-Sass/scss-named/_base16-atelier-dune"
 $base16-scheme: (
   base00: $Atelier-Dune-00,
-	base01: $Atelier-Dune-01,
-	...
+  base01: $Atelier-Dune-01,
+  ...
 );
 import "base16-scss/highlight";
 {% endhighlight %}
