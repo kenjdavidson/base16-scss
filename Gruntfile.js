@@ -24,12 +24,17 @@ module.exports = function(grunt) {
       }
     },
     copy: {
-      main: {
-        expand: true,
+      main: [{
+        expand: true,   // copy to /dist folder for packaging
+        cwd: 'src',
+        src: '**',
+        dest: 'dist'        
+      },{
+        expand: true,   // copy to /docs folder
         cwd: 'src',
         src: '**',
         dest: 'docs/_sass/rouge-base16-scss'
-      }
+      }]
     }
   });
 
