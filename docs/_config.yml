@@ -21,6 +21,7 @@ baseurl: "/base16-scss" # the subpath of your site, e.g. /blog
 url: "https://kenjdavidson.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  kenjdavidson
 git_address: https://github.com/kenjdavidson/base16-scss
+git_edit_address: https://github.com/kenjdavidson/base16-scss/blob/master/docs
 
 # Build settings
 markdown: kramdown
@@ -38,3 +39,29 @@ include: ['./']
 
 # Exclude from processing.
 exclude: ['Gemfile','Gemfile.log','node_modules']
+
+timezone: America/Toronto
+defaults:
+- scope:
+    path: _posts
+    type: posts
+  values:
+    layout: post
+    sectionid: blog
+
+- scope:
+    path: _docs
+    type: docs
+  values:
+    layout: docs
+    sectionid: docs
+    seo:
+      type: "WebPage"
+
+collections:
+  docs:
+    permalink: /:collection/:path/
+    output: true
+  posts:
+    permalink: /blog/:year/:month/:day/:title/
+    output: true

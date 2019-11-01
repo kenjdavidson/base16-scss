@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Base16 Scss Builder/Samples"
+title:  "Base16 Scss Builder"
 date:   2019-10-25 20:09:11 -0400
 categories: jekyll update
 ---

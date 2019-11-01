@@ -472,7 +472,8 @@ figure.highlight {
  * highlighter-rouge class.
  */
 .highlighter-rouge {
+  color: var(--base05);
   background-color: var(--base01);
-  padding: 2px 0px; }
+  padding: 2px 0.25em; }
 
 /*# sourceMappingURL=highlight.css.map */

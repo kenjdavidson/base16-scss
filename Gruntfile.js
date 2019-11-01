@@ -25,10 +25,17 @@ module.exports = function(grunt) {
     },
     copy: {
       main: {
-        expand: true,
-        cwd: 'src',
-        src: '**',
-        dest: 'docs/_sass/rouge-base16-scss'
+        files: [{
+          expand: true,
+          cwd: 'src',
+          src: '**',
+          dest: 'dest'
+        },{
+          expand: true,
+          cwd: 'src',
+          src: '**',
+          dest: 'docs/_sass/base16-scss'
+        }]
       }
     }
   });

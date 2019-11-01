@@ -3,10 +3,16 @@
 ---
 @charset "utf-8";
 
+// Import the rouge-base to make them available for bootstrap variables
+@import "base16-scss/themes/base16";
+@import "base16-scss/themes/github";
+@import "base16-scss/themes/material";
+@import "base16-scss/highlight";
+
 // Bootstrap variable overrides
-$grid-gutter-width:         30px !default;
-$container-desktop:            (900px + $grid-gutter-width) !default;
-$container-large-desktop:      (900px + $grid-gutter-width) !default;
+$grid-gutter-width: 30px !default;
+$container-desktop: (900px + $grid-gutter-width) !default;
+$container-large-desktop: (900px + $grid-gutter-width) !default;
 
 @import
 {% if site.bootwatch %}
@@ -26,20 +32,17 @@ $container-large-desktop:      (900px + $grid-gutter-width) !default;
 // Import standard Jekyll-doc-theme scss
 @import "_site";
 
-// Override some items
+// Now do any custom stuf we need
 .header-container {
-  background: $navbar-default-bg;
+  background: map-get($base16-scheme, base01);
 }
 
-/**
- * Rouge-Base16-Scss
- */
-@import "rouge-base16-scss/themes/base16";
-@import "rouge-base16-scss/themes/github";
-@import "rouge-base16-scss/themes/material";
+nav.navbar-default {
+  background: map-get($base16-scheme, base01);
+}
 
-$base16-scheme: $base16-github;
-@import "rouge-base16-scss/highlight";
+$base16-github: apply-color-vars($base16-github);
+@include build-base16-scheme('#base16-github', $base16-github);
 
 $base16-eighties: apply-color-vars($base16-eighties);
 @include build-base16-scheme('#base16-eighties', $base16-eighties);
