@@ -3,21 +3,21 @@ title: Adding Schemes
 permalink: /docs/schemes/
 ---
 
-Once you've got the scheme you're looking for with regards to [Rouge](http://rouge.jneen.net/) highlighting, you can start to take this functionality a little bit further by creating multiple scheme maps and applying the built values to any number of selectors.
-
-## Adding Base16-Cupertino Scheme
-
-Creating an extra scheme is as easy as setting a map with the appropriate values.   Googling around will provide a large number of already designed schemes:
+Once you've got the scheme you're looking for with regards to [Rouge](http://rouge.jneen.net/) highlighting, you can start to take this functionality a little bit further by creating multiple scheme maps and applying the built values to any number of selectors.  Googling around will provide a large number of already designed schemes:
 
 - [https://github.com/chriskempson/base16#user-content-scheme-repositories](https://github.com/chriskempson/base16#user-content-scheme-repositories)
 - [https://github.com/samme/base16-styles](https://github.com/samme/base16-styles)
 - [https://github.com/tajmone/Base16-Sass](https://github.com/tajmone/Base16-Sass)
 
+Creating an extra scheme is as easy as setting a map with the appropriate values.
+
+## Adding Base16-Cupertino Scheme
+
 Once you've picked or designed one, you can apply using the highlight helper mixin and function.  Using the [base16-cupertino](https://github.com/Defman21/base16-cupertino-scheme) scheme we can produce something that looks more Appl-ish:
 
 <div id="base16-cupertino">
 {% highlight scss %}
-$base16-twilight: (
+$base16-cupertino: (
   base00: "1e1e1e",
   base01: "323537",
   base02: "464b50",
