@@ -15,22 +15,20 @@ $container-desktop: (900px + $grid-gutter-width) !default;
 $container-large-desktop: (900px + $grid-gutter-width) !default;
 
 @import
-{% if site.bootwatch %}
-  "bootswatch/{{site.bootwatch | downcase}}/variables",
-{% endif %}
+  {% if site.bootwatch %}
+    "bootswatch/{{site.bootwatch | downcase}}/variables",
+  {% endif %}
 
-"bootstrap",
+  "bootstrap",
 
-{% if site.bootwatch %}
-  "bootswatch/{{site.bootwatch | downcase}}/bootswatch",
-{% endif %}
+  {% if site.bootwatch %}
+    "bootswatch/{{site.bootwatch | downcase}}/bootswatch",
+  {% endif %}
 
-"syntax-highlighting",
-"typeahead"
+  "syntax-highlighting",
+  "typeahead",
+  "jekyll-doc-theme"
 ;
-
-// Import standard Jekyll-doc-theme scss
-@import "_site";
 
 // Now do any custom stuf we need
 .header-container {
