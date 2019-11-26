@@ -21,11 +21,11 @@ $base16schemes: map-merge($base16default, $base16schemes);
  */
 figure.highlight {
 	color: var(--base05);
-	background-color: var(--base01);
+	background-color: var(--base00);
 
 	pre {
 		color: var(--base05);
-		background-color: var(--base01);	
+		background-color: var(--base00);	
 	}
 
 	.hll { background-color: var(--base02); }
@@ -105,7 +105,7 @@ figure.highlight {
  * highlighter-rouge class.
  */
 .highlighter-rouge {
-	color: var(--base05);
+	color: var(--base06);
 	background-color: var(--base01);
 	padding: 2px 0.25em;
 }
