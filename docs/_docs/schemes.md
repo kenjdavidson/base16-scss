@@ -15,7 +15,7 @@ Creating an extra scheme is as easy as setting a map with the appropriate values
 
 Once you've picked or designed one, you can apply using the highlight helper mixin and function.  Using the [base16-cupertino](https://github.com/Defman21/base16-cupertino-scheme) scheme we can produce something that looks more Appl-ish:
 
-<div id="base16-cupertino">
+<div class=".base16-cupertino">
 {% highlight scss %}
 $base16-cupertino: (
   base00: "1e1e1e",
