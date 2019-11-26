@@ -4,9 +4,9 @@
 @charset "utf-8";
 
 // Import the rouge-base to make them available for bootstrap variables
-@import "base16-scss/sthemes/base16";
-@import "base16-scss/sthemes/github";
-@import "base16-scss/sthemes/material";
+@import "base16-scss/schemes/base16";
+@import "base16-scss/schemes/github";
+@import "base16-scss/schemes/material";
 
 $base16schemes: (
   ".base16-dark": $base16-dark,
