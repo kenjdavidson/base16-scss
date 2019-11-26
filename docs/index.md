@@ -24,14 +24,14 @@ In order to use the basic functionality (which is to create one or more schemes)
 
 {% highlight css %}
 :root {
-  ... $base16name values ...
+  ...
 }
 {% endhighlight%}
 
-The default provided without any additions is `$base16-github`:
+The default provided without any additions is `$base16-github`, it can be overridden by setting:
 
 {% highlight scss %}
-$base16-scheme: ( 
+$base16default: ( 
 	base00: "181818",
 	base01: "282828",
 	base02: "383838",

@@ -5,9 +5,9 @@
 @import "schemes/github.scss";
 @import "functions";
 
-$base16themes: () !default;
+$base16schemes: () !default;
 $base16default: (':root': $base16-github) !default;
-$base16schemes: map-merge($base16default, $base16themes);
+$base16schemes: map-merge($base16default, $base16schemes);
 
 @each $name,$scheme in $base16schemes {
 	@include apply-scheme($name, build-scheme($scheme))
