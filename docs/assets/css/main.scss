@@ -8,15 +8,15 @@
 @import "base16-scss/sthemes/github";
 @import "base16-scss/sthemes/material";
 
-$base16schemes: map(
-  'base16-dark': $base16-dark,
-  'base16-light': $base16-light,
-  'base16-eighties': $base16-eighties,
-  'base16-mocha': $base16-mocha,
-  'base16-ocean': $base16-ocean,
-  'base16-material': $base16-material,
-  'base16-material-lighter': $base16-material-lighter,
-  'base16-material-darker': $base16-material-darker,
+$base16schemes: (
+  ".base16-dark": $base16-dark,
+  ".base16-light": $base16-light,
+  ".base16-eighties": $base16-eighties,
+  ".base16-mocha": $base16-mocha,
+  ".base16-ocean": $base16-ocean,
+  ".base16-material": $base16-material,
+  ".base16-material-lighter": $base16-material-lighter,
+  ".base16-material-darker": $base16-material-darker
 );
 
 @import "base16-scss/base16scss";
