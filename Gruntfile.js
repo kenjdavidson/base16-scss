@@ -6,7 +6,7 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         files: [{
-          './dist/highlight.css': './src/highlight.scss'      
+          './dist/css/base16scss.css': './src/base16scss.scss'      
         },{
           expand: true,
           cwd: 'example/scss',
@@ -19,7 +19,7 @@ module.exports = function(grunt) {
     cssmin: {
       dist: {
         files: {
-          './dist/highlight.min.css': './dist/highlight.css'
+          './dist/css/base16scss.min.css': './dist/base16scss.css'
         }
       }
     },

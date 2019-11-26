@@ -1,6 +1,8 @@
 # IDE Files
 .project
 .classpath
+.settings/
+.vscode/
 
 # Build
 node_modules/

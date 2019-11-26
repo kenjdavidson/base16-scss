@@ -14,7 +14,21 @@ This project started off as a way in which to play with [Rouge](http://rouge.jne
 
 ## Configure
 
-Configure the `$base16-scheme` map using the [Base16 Guidelines](https://github.com/chriskempson/base16/blob/master/styling.md) using a pre-made or custom set of colors (the default settings are [base16-default-dark](https://github.com/chriskempson/base16-default-schemes/blob/master/default-dark.yaml).
+Configure the `$base16schemes` map using the [Base16 Guidelines](https://github.com/chriskempson/base16/blob/master/styling.md) using a pre-made or custom set of colors (the default settings are [base16-default-dark](https://github.com/chriskempson/base16-default-schemes/blob/master/default-dark.yaml).
+
+In order to use the basic functionality (which is to create one or more schemes) the following steps should be taken:
+
+1. Import or set the appropriate `$base16name: ()` map.
+2. Override the default `:root` configuration `$base16schemes: (':root': $base16name, [...])`.
+3. Import the `@import "$base16scss"` to perform the building.
+
+{% highlight css %}
+:root {
+  ... $base16name values ...
+}
+{% endhighlight%}
+
+The default provided without any additions is `$base16-github`:
 
 {% highlight scss %}
 $base16-scheme: ( 
@@ -62,11 +76,22 @@ angular.module('UserModule', [])
   }]);
 {%- endhighlight -%}
 
-## More
+## Customization
 
-After you've `@import "../highlight"` (on top of the aforementioned variables) you'll be able to create additional schemes and apply them to any Css selector you wish.  For more details on this see the [documents](docs/home/) pages.  Below the [base16-github](https://github.com/Defman21/base16-github-scheme/blob/master/github.yaml) scheme is applied to `#base16-github`:
+You can add any number of schemes to your build by providing them to the `$base16schemes` default map prior to `@import "base16scss"`.  This allows you to build the variables and apply them to your specified selectors.  For example, if we wanted all code to be Github, while Ruby code being base16-dark, we would do the following:
 
-<div id="base16-github">
+{% highlight scss %}
+@import "schemes/base16";
+
+$base16schemes: (
+  '.base16-ruby': $base16-dark,
+  '.base16-custom: $base16-custom
+)
+
+@import "base16scss";
+{% endhighlight%}
+
+{:.base16-ruby}
 {% highlight ruby %} 
 require "gem"
 
@@ -89,4 +114,3 @@ end
 person1 = Person.new(:name => "Chris")
 puts "#{Person::greet} #{person1.name}\n"
 {% endhighlight %}
-</div>
