@@ -1,16 +1,12 @@
-/**
- * Required variable creation based on builder specification
- * https://github.com/chriskempson/base16/blob/master/builder.md
- */ 
+/// Required variable creation based on builder specification
+/// https://github.com/chriskempson/base16/blob/master/builder.md
  
- /**
-  * Applies the provided base16 map to the specified css selector as
-  * as css variables.
-  *
-  * @param $selector the name of the CSS selector to receive vars
-  * @param $base16 the $base16 theme map
-  */
- @mixin apply-scheme($selector, $base16) {
+/// Applies the provided base16 map to the specified css selector as
+/// as css variables.
+/// 
+/// @param $selector the name of the CSS selector to receive vars
+/// @param $base16 the $base16 theme map
+@mixin apply-scheme($selector, $base16) {
   #{$selector} {
     @each $name,$color in $base16 {
       --#{$name}: #{$color};
@@ -18,12 +14,13 @@
   }
 } 
 
-/**
- * Builds all the applicable values based on the Base16 builder
- * specification.
- *
- * @param $base16 the $base16-scheme map containing all colors
- */
+/// Builds all the applicable values based on the Base16 builder
+/// specification.
+/// 
+/// @param {map} $base16 
+///   The $base16-scheme map containing all colors
+/// @returns {map}
+///   The converted map file including variable definitions
 @function build-scheme($base16) {
   @each $name,$color in $base16 {
     // Hex values
@@ -57,9 +54,10 @@
   @return $base16;
 }
 
-/**
- * Convert hex value to rgb (integer).
- */
+/// Convert hex value to rgb (integer).
+/// 
+/// @param {number} $hex
+///   The hex value to be converted to rbg
 @function hex-to-rgb($hex) {  
   $digits: '0123456789ABCDEF';
   $hex: to-upper-case($hex);

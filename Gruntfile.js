@@ -19,7 +19,7 @@ module.exports = function(grunt) {
     cssmin: {
       dist: {
         files: {
-          './dist/css/base16scss.min.css': './dist/base16scss.css'
+          './dist/css/base16scss.min.css': './dist/css/base16scss.css'
         }
       }
     },

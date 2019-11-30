@@ -1,7 +1,5 @@
-/**
- * Rouge highlight syntax provides as much of a base16 builder as possible as defined
- * by https://github.com/chriskempson/base16/blob/master/builder.md
- */ 
+/// Rouge highlight syntax provides as much of a base16 builder as possible as defined
+/// by https://github.com/chriskempson/base16/blob/master/builder.md
 @import "schemes/github.scss";
 @import "functions";
 
@@ -13,12 +11,10 @@ $base16schemes: map-merge($base16default, $base16schemes);
 	@include apply-scheme($name, build-scheme($scheme))
 }
 
-/**
- * Set styles for figures.highlight and code.highlight to use the specified
- * css variables.  This allows wrapping of each highlight section with a 
- * different selector which has been updated.  For example:
- * <div class="base16github">{% highlight java linenos %}{% endhighlight %}</div>
- */
+/// Set styles for figures.highlight and code.highlight to use the specified
+/// css variables.  This allows wrapping of each highlight section with a 
+/// different selector which has been updated.  For example:
+/// <div class="base16github">{% highlight java linenos %}{% endhighlight %}</div>
 figure.highlight {
 	color: var(--base05);
 	background-color: var(--base00);
@@ -100,10 +96,8 @@ figure.highlight {
 	.il { color: var(--base09); } /* Literal.Number.Integer.Long */
 }
 
-/**
- * Inline routing defined using `single ticks` will be displayed in Jekyll with a 
- * highlighter-rouge class.
- */
+/// Inline routing defined using `single ticks` will be displayed in Jekyll with a 
+/// highlighter-rouge class.
 .highlighter-rouge {
 	color: var(--base06);
 	background-color: var(--base01);
