@@ -10,52 +10,36 @@ link:
 
 # Overview
 
-This project started off as a way in which to play with [Rouge](http://rouge.jneen.net/) highlighter themes within Jekyll - but it's turned into a method for getting Base16 themes into any Scss driven web project.   The goal became getting any Base16 theme available or developed to be available to all framework (Jekyll, Rouge, CSS, etc).  
+This project started off as a way in which to play with [Rouge](http://rouge.jneen.net/) highlighter themes within Jekyll - but it's turned into something entirely different.  While playing with Jekyll and Rouge I came across the [Base16 project](https://github.com/chriskempson/base16) and decided that it would be an interesting an idea to attempt and implement into a project making the themes available web projects.
 
-## Configure
+## Conversion
 
-Configure the `$base16schemes` map using the [Base16 Guidelines](https://github.com/chriskempson/base16/blob/master/styling.md) using a pre-made or custom set of colors (the default settings are [base16-default-dark](https://github.com/chriskempson/base16-default-schemes/blob/master/default-dark.yaml).
+The project converts your configured schemes into CSS selector variables following the [Base16 Guidelines](https://github.com/chriskempson/base16/blob/master/styling.md).  For example, the following:
 
-In order to use the basic functionality (which is to create one or more schemes) the following steps should be taken:
+{% highlight ruby %}
+@import "base16scss/schemes/base16";
 
-1. Import or set the appropriate `$base16name: ()` map.
-2. Override the default `:root` configuration `$base16schemes: (':root': $base16name, [...])`.
-3. Import the `@import "$base16scss"` to perform the building.
+$base16schemes: (
+  '.base16-dark': $base16-dark
+);
 
-{% highlight css %}
-:root {
-  ...
-}
-{% endhighlight%}
-
-The default provided without any additions is `$base16-github`, it can be overridden by setting:
-
-{% highlight scss %}
-$base16default: ( 
-	base00: "181818",
-	base01: "282828",
-	base02: "383838",
-	base03: "585858",
-	base04: "b8b8b8",
-	base05: "d8d8d8",
-	base06: "e8e8e8",
-	base07: "f8f8f8",
-	base08: "ab4642",
-	base09: "dc9656",
-	base0A: "f7ca88",
-	base0B: "a1b56c",
-	base0C: "86c1b9",
-	base0D: "7cafc2",
-	base0E: "ba8baf",
-	base0F: "a16946"	
-) !default;
+@import "base16scss/base16scss";
 {% endhighlight %}
 
-## Enjoy
+is converted into the following CSS (where the default :root selector is based on the base16-github scheme):
 
-All the guideline values will now be available in both `$base16-schema` or `--root: {}`.  Your Rouge highlights will now be displayed with the configured scheme.
+{% highlight css %}
+:root { --base00: #ffffff; --base01: #f5f5f5; --base02: #c8c8fa; ... }
 
-{% highlight javascript %}
+.base16-dark { --base00: #181818; --base01: #282828; --base02: #383838; ... }
+{% endhighlight %}
+
+## Application
+
+The newly converted `$base16schemes` and CSS variables can now be applied across your application.   The standard `:root {}` values are based off the [base16-github](https://github.com/Defman21/base16-github-scheme) scheme, but to override it for a specific code block (say we want javascript to be base16 dark) the following is possible:
+
+{:.base16-dark}
+{% highlight javascript linenos %}
 angular.module('UserModule', [])
   .service('UserService', ['$http', function($http){
     return {
@@ -76,41 +60,19 @@ angular.module('UserModule', [])
   }]);
 {%- endhighlight -%}
 
-## Customization
+Using the the markup:
 
-You can add any number of schemes to your build by providing them to the `$base16schemes` default map prior to `@import "base16scss"`.  This allows you to build the variables and apply them to your specified selectors.  For example, if we wanted all code to be Github, while Ruby code being base16-dark, we would do the following:
 
-{% highlight scss %}
-@import "schemes/base16";
-
-$base16schemes: (
-  '.base16-ruby': $base16-dark,
-  '.base16-custom: $base16-custom
-)
-
-@import "base16scss";
-{% endhighlight%}
-
-{:.base16-ruby}
-{% highlight ruby %} 
-require "gem"
-
-number = 0
-regexp = /[abc]/
-
-# This is a comment
-class Person
-  attr_accessor :name
-  
-  def initialize(attributes = {})
-    @name = attributes[:name]
-  end
-  
-  def self.greet
-    "hello"
-  end
-end
-
-person1 = Person.new(:name => "Chris")
-puts "#{Person::greet} #{person1.name}\n"
+{% highlight shell linenos %}
+{% raw %}
+{:.base16-dark}
+{% highlight javascript %}
+angular.module('UserModule', [])
+  .service('UserService', ['$http', function($http){
+    return {
+      getUsers: function() {
+        return $http.get('/users');
+...
+{% endhighlight %} 
+{% endraw %}
 {% endhighlight %}

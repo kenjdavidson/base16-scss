@@ -5,21 +5,16 @@
 
 // Import the rouge-base to make them available for bootstrap variables
 @import "base16-scss/schemes/base16";
-@import "base16-scss/schemes/github";
 @import "base16-scss/schemes/material";
-@import "cupertino";
 
-$base16schemes: (
-  ".base16-dark": $base16-dark,
-  ".base16-light": $base16-light,
-  ".base16-eighties": $base16-eighties,
-  ".base16-mocha": $base16-mocha,
-  ".base16-ocean": $base16-ocean,
-  ".base16-material": $base16-material,
-  ".base16-material-lighter": $base16-material-lighter,
-  ".base16-material-darker": $base16-material-darker,
-  ".base16-ruby": $base16-cupertino
-);
+$base16schemes: ( 
+  '.base16-dark': $base16-dark,
+  '.base16-light': $base16-light,
+  '.base16-mocha': $base16-mocha,
+  '.base16-ocean': $base16-ocean,
+  '.base16-eighties': $base16-eighties,
+  '.base16-material': $base16-material
+); 
 
 @import "base16-scss/base16scss";
 
@@ -46,9 +41,9 @@ $container-large-desktop: (900px + $grid-gutter-width) !default;
 
 // Now do any custom stuff we need
 .header-container {
-  background: map-get($base16default, base01);
+  background: var(--base05);
 }
 
 nav.navbar-default {
-  background: map-get($base16default, base01);
+  background: var(--base05);
 }

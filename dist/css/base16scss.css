@@ -195,77 +195,13 @@
 figure.highlight {
   color: var(--base05);
   background-color: var(--base00);
-  /* Comment */
-  /* Error */
-  /* Keyword */
-  /* Operator */
-  /* Comment.Hashbang */
-  /* Comment.Multiline */
-  /* Comment.Preproc */
-  /* Comment.PreprocFile */
-  /* Comment.Single */
-  /* Comment.Special */
-  /* Generic.Deleted */
-  /* Generic.Emph */
-  /* Generic.Error */
-  /* Generic.Heading */
-  /* Generic.Inserted */
-  /* Generic.Output */
-  /* Generic.Prompt */
-  /* Generic.Strong */
-  /* Generic.Subheading */
-  /* Generic.Traceback */
-  /* Keyword.Constant */
-  /* Keyword.Declaration */
-  /* Keyword.Namespace */
-  /* Keyword.Pseudo */
-  /* Keyword.Reserved */
-  /* Keyword.Type */
-  /* Literal.Number */
-  /* Literal.String */
-  /* Name */
-  /* Name.Attribute */
-  /* Name.Builtin */
-  /* Name.Class */
-  /* Name.Constant */
-  /* Name.Decorator */
-  /* Name.Entity */
-  /* Name.Exception */
-  /* Name.Function */
-  /* Name.Label */
-  /* Name.Namespace */
-  /* Name.Tag */
-  /* Name.Variable */
-  /* Operator.Word */
-  /* Text.Whitespace */
-  /* Literal.Number.Bin */
-  /* Literal.Number.Float */
-  /* Literal.Number.Hex */
-  /* Literal.Number.Integer */
-  /* Literal.Number.Oct */
-  /* Literal.String.Affix */
-  /* Literal.String.Backtick */
-  /* Literal.String.Char */
-  /* Literal.String.Delimiter */
-  /* Literal.String.Doc */
-  /* Literal.String.Double */
-  /* Literal.String.Escape */
-  /* Literal.String.Heredoc */
-  /* Literal.String.Interpol */
-  /* Literal.String.Other */
-  /* Literal.String.Regex */
-  /* Literal.String.Single */
-  /* Literal.String.Symbol */
-  /* Name.Builtin.Pseudo */
-  /* Name.Function.Magic */
-  /* Name.Variable.Class */
-  /* Name.Variable.Global */
-  /* Name.Variable.Instance */
-  /* Name.Variable.Magic */
-  /* Literal.Number.Integer.Long */ }
+  border: 1px solid var(--base04);
+  margin-bottom: 1em; }
   figure.highlight pre {
     color: var(--base05);
-    background-color: var(--base00); }
+    background-color: var(--base00);
+    border: 0px solid transparent;
+    margin: 0px; }
   figure.highlight .hll {
     background-color: var(--base02); }
   figure.highlight .c {
@@ -429,8 +365,8 @@ figure.highlight {
     color: var(--base09); }
 
 .highlighter-rouge {
-  color: var(--base06);
-  background-color: var(--base01);
+  color: var(--base05);
+  background-color: var(--base00);
   padding: 2px 0.25em; }
 
 /*# sourceMappingURL=base16scss.css.map */
