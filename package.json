@@ -4,12 +4,13 @@
   "description": "Base16 Scss builder and samples",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postversion": "git push && git push --tags && rm -rf build/temp"
+    "postversion": "git push && git push --tags && rm -rf build/temp && npm publish"
   },
   "author": "Kenneth Davidson",
+  "homepage": "https://kenjdavidson.github.io/base16-scss",
   "repository": {
     "type": "git",
-    "url": "git://github.com/kenjdavidson/base16-scss.git"
+    "url": "https://github.com/kenjdavidson/base16-scss.git"
   },
   "license": "MIT",
   "dependencies": {},
