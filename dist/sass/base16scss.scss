@@ -21,12 +21,21 @@ figure.highlight {
 	border: 1px solid var(--base04);
 	margin-bottom: 1em;
 
+	table.rouge-table {
+		margin: -10px;
+	}
+
+	.gutter.gl {
+		border-right: 1px solid var(--base04)
+	}
+
 	pre {
 		color: var(--base05);
 		background-color: var(--base00);	
 		border: 0px solid transparent;
 		margin: 0px;
 	}
+
 	.hll { background-color: var(--base02); }
 
 	.c { color: var(--base03); font-style: italic; } /// Comment

@@ -197,6 +197,10 @@ figure.highlight {
   background-color: var(--base00);
   border: 1px solid var(--base04);
   margin-bottom: 1em; }
+  figure.highlight table.rouge-table {
+    margin: -10px; }
+  figure.highlight .gutter.gl {
+    border-right: 1px solid var(--base04); }
   figure.highlight pre {
     color: var(--base05);
     background-color: var(--base00);

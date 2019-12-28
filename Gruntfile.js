@@ -29,7 +29,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'src',
           src: '**',
-          dest: 'dist'
+          dest: 'dist/sass'
         },{
           expand: true,
           cwd: 'src',
