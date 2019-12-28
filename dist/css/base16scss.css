@@ -194,7 +194,7 @@
 
 figure.highlight {
   color: var(--base05);
-  background-color: var(--base00);
+  background-color: var(--base01);
   border: 1px solid var(--base04);
   margin-bottom: 1em; }
   figure.highlight table.rouge-table {
@@ -203,7 +203,7 @@ figure.highlight {
     border-right: 1px solid var(--base04); }
   figure.highlight pre {
     color: var(--base05);
-    background-color: var(--base00);
+    background-color: var(--base01);
     border: 0px solid transparent;
     margin: 0px; }
   figure.highlight .hll {
