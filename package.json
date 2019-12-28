@@ -9,7 +9,7 @@
   "author": "Kenneth Davidson",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kenjdavidson/base16-scss"
+    "url": "git://github.com/kenjdavidson/base16-scss.git"
   },
   "license": "MIT",
   "dependencies": {},
