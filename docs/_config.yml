@@ -13,54 +13,70 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
+# 
+# The majority of these settings are used from Jekyll SEO
+# https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 title: Base16 Scss
+author: Ken Davidson
 email: ken.j.davidson@live.ca
-description: >- # this means to ignore newlines until "baseurl:"
-  Provide a Base16 builder and some sample themes for use with Scss.
-baseurl: "/base16-scss" # the subpath of your site, e.g. /blog
-url: "https://kenjdavidson.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  kenjdavidson
-git_address: https://github.com/kenjdavidson/base16-scss
-git_edit_address: https://github.com/kenjdavidson/base16-scss/blob/master/docs
+tagline: Base16 Schemes Builder with SCSS
+description: |
+  Customize and build multiple Base16 schemes through SCSS.  Easily include created themes into
+  your projects through NPM.
+url: https://kenjdavidson.github.com/base16-scss
+logo: /jekyll-kb/assets/img/sitelogo.png
+social:
+  name: Ken Davidson
+  links:
+    - https://www.linkedin.com/in/kenjdavidson 
+    - https://github.com/kenjdavidson
+# google_site_verification:
+lang: en_CA
+github:
+  username: kenjdavidson
+  url: https://github.com/kenjdavidson/base16-scss
+  edit_url: https://github.com/kenjdavidson/base16-scss/blog/master
+twitter:
+  username: kenjdavidson
+  card: summary
+
+search: false
+
+# Jekyll related configuration items.
+# https://jekyllrb.com/docs/configuration/
+baseurl: /base16-scss
 
 # Build settings
+remote_theme: kenjdavidson/jekyll-kb
 markdown: kramdown
 highlighter: rouge
-remote_theme: kenjdavidson/jekyll-doc-theme@gh-pages
-bootwatch: Yeti
 plugins:
   - jekyll-feed
   - jekyll-redirect-from
   - jekyll-seo-tag
   - jekyll-sitemap
 
-# Include 
-include: ['./']
-
 # Exclude from processing.
 exclude: ['Gemfile','Gemfile.log','node_modules']
 
+# Timezone
 timezone: America/Toronto
-defaults:
-- scope:
-    path: _posts
-    type: posts
-  values:
-    layout: post
-    sectionid: blog
 
-- scope:
-    path: _docs
-    type: docs
-  values:
-    layout: docs
-    sectionid: docs
-    seo:
-      type: "WebPage"
+defaults:
+  - scope:
+      path: ""
+      type: "docs"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "page"
 
 collections:
   docs:
-    permalink: /:collection/:path/
+    permalink: /:path/
     output: true
   posts:
     permalink: /blog/:year/:month/:day/:title/

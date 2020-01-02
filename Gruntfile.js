@@ -34,7 +34,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'src',
           src: '**',
-          dest: 'docs/_sass/base16-scss'
+          dest: 'docs/_sass/base16scss'
         }]
       }
     }

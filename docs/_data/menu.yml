@@ -1,0 +1,10 @@
+- title: Getting Started
+  links:
+  - doc: installation.md
+  - doc: schemes.md
+  - doc: examples.md
+
+- title: Links
+  links:
+  - title: Base16
+    href: http://chriskempson.com/projects/base16/

@@ -1,10 +1,14 @@
 /// Rouge highlight syntax provides as much of a base16 builder as possible as defined
 /// by https://github.com/chriskempson/base16/blob/master/builder.md
-@import "schemes/github.scss";
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap');
+@import "schemes/base16.scss";
 @import "functions";
 
+$highlight-font-family: 'Source Code Pro', monospace !default;
+$highlight-font-size: 0.9em !default;
+
 $base16schemes: () !default;
-$base16default: (':root': $base16-github) !default;
+$base16default: (':root': $base16-dark) !default;
 $base16schemes: map-merge($base16default, $base16schemes);
 
 @each $name,$scheme in $base16schemes {
@@ -16,9 +20,11 @@ $base16schemes: map-merge($base16default, $base16schemes);
 /// different selector which has been updated.  For example:
 /// <div class="base16github">{% highlight java linenos %}{% endhighlight %}</div>
 figure.highlight {
+	font-family: $highlight-font-family;
+	font-size: $highlight-font-size;
 	color: var(--base05);
-	background-color: var(--base01);
-	border: 1px solid var(--base04);
+	background-color: var(--base00);
+	border: 1px solid var(--base01);
 	margin-bottom: 1em;
 
 	table.rouge-table {
@@ -31,7 +37,7 @@ figure.highlight {
 
 	pre {
 		color: var(--base05);
-		background-color: var(--base01);	
+		background-color: var(--base00);	
 		border: 0px solid transparent;
 		margin: 0px;
 	}

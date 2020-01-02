@@ -4,46 +4,65 @@
 @charset "utf-8";
 
 // Import the rouge-base to make them available for bootstrap variables
-@import "base16-scss/schemes/base16";
-@import "base16-scss/schemes/material";
+@import "base16scss/schemes/base16";
+@import "base16scss/schemes/material";
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap');
+
+$base16-monokai: (
+  base00: "272822",
+  base01: "383830",
+  base02: "49483e",
+  base03: "75715e",
+  base04: "a59f85",
+  base05: "f8f8f2",
+  base06: "f5f4f1",
+  base07: "f9f8f5",
+  base08: "f92672",
+  base09: "fd971f",
+  base0A: "f4bf75",
+  base0B: "a6e22e",
+  base0C: "a1efe4",
+  base0D: "66d9ef",
+  base0E: "ae81ff",
+  base0F: "cc6633"
+);
 
 $base16schemes: ( 
+  'root': $base16-dark,
   '.base16-dark': $base16-dark,
   '.base16-light': $base16-light,
   '.base16-mocha': $base16-mocha,
   '.base16-ocean': $base16-ocean,
   '.base16-eighties': $base16-eighties,
-  '.base16-material': $base16-material
+  '.base16-material': $base16-material,
+  '.base16-monokai': $base16-monokai
 ); 
 
-@import "base16-scss/base16scss";
+$scrollbar-thumb-color: rgba(0,0,0,0.4);
 
-// Bootstrap variable overrides
-$grid-gutter-width: 30px !default;
-$container-desktop: (900px + $grid-gutter-width) !default;
-$container-large-desktop: (900px + $grid-gutter-width) !default;
+$navigation-width: 300px !default;
+$fa-font-path:        "../webfonts";
+
+$enable-shadows:              true;
+$enable-responsive-font-size: true;
+
+$navbar-title-size: 1.5em !default;
+$navbar-title-weight: bold !default;
 
 @import
-  {% if site.bootwatch %}
-    "bootswatch/{{site.bootwatch | downcase}}/variables",
-  {% endif %}
-
-  "bootstrap",
-
-  {% if site.bootwatch %}
-    "bootswatch/{{site.bootwatch | downcase}}/bootswatch",
-  {% endif %}
-
-  "syntax-highlighting",
-  "typeahead",
-  "jekyll-doc-theme"
+  {% if site.data.theme.bootswatch %}"bootswatch/{{ site.data.theme.bootswatch.theme | downcase }}/variables",{% endif %}
+  "bootstrap/bootstrap",
+  {% if site.data.theme.bootswatch %}"bootswatch/{{ site.data.theme.bootswatch.theme | downcase }}/bootswatch",{% endif %}
+  "fontawesome/fontawesome",
+  "fontawesome/brands",
+  "fontawesome/regular",
+  "fontawesome/solid",
+  "theme",
+  "base16scss/base16scss"
 ;
 
-// Now do any custom stuff we need
-.header-container {
-  background: var(--base05);
-}
-
-nav.navbar-default {
-  background: var(--base05);
+.highlight,
+.highlighter-rouge {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.9em;
 }
