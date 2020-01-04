@@ -47,7 +47,7 @@ search: false
 baseurl: /base16-scss
 
 # Build settings
-remote_theme: kenjdavidson/jekyll-kb@v1.0.6
+remote_theme: kenjdavidson/jekyll-kb
 markdown: kramdown
 highlighter: rouge
 plugins:
