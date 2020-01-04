@@ -39,7 +39,7 @@ There are a small number of variables that control the built schemes.  I'm hopin
 
 The following two variables can be overwritten to configure the highlight font
 
-{% highlight sass %}
+{% highlight SCSS %}
 $highlight-font-family: 'Source Code Pro', monospace !default;
 $highlight-font-size: 0.9em !default;
 {% endhighlight %}
@@ -48,7 +48,7 @@ $highlight-font-size: 0.9em !default;
 
 There are two main scheme variables that are overridable.
 
-{% highlight sass %}
+{% highlight SCSS %}
 $base16schemes: () !default;
 $base16default: (':root': $base16-dark) !default;
 $base16schemes: map-merge($base16default, $base16schemes);
@@ -58,7 +58,7 @@ In most cases `$base16schemes` should be overridden to create any number of poss
 
 In the following example, we will add the [base16-default-light](https://github.com/chriskempson/base16-default-schemes/blob/master/default-light.yaml), leaving `$base16dark` as the default `:root` scheme:
 
-{% highlight scss %}
+{% highlight SCSS %}
 $base16-darklight: (
     base00: "f8f8f8"
     base01: "e8e8e8"

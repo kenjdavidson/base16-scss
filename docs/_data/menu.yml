@@ -6,5 +6,11 @@
 
 - title: Links
   links:
+  - title: Jekyll
+    href: https://jekyllrb.com/
+  - title: Rouge
+    href: http://rouge.jneen.net/
+  - title: Sass
+    href: https://sass-lang.com/
   - title: Base16
-    href: http://chriskempson.com/projects/base16/
+    href: http://chriskempson.com/projects/base16/  
