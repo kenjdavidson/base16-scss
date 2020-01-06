@@ -32,10 +32,10 @@ social:
     - https://github.com/kenjdavidson
 # google_site_verification:
 lang: en_CA
-github:
-  username: kenjdavidson
-  url: https://github.com/kenjdavidson/base16-scss
-  edit_url: https://github.com/kenjdavidson/base16-scss/blob/master/docs
+github_username: kenjdavidson
+github_url: https://github.com/kenjdavidson/base16-scss
+github_edit_url: https://github.com/kenjdavidson/base16-scss/blob/master
+
 twitter:
   username: kenjdavidson
   card: summary
