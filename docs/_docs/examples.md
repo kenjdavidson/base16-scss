@@ -37,7 +37,7 @@ $body-color: map-get($base16-scheme, base04;
 
 ## Foundation
 
-Foundation provides the (colour palette)[https://foundation.zurb.com/sites/docs/global.html] for modifying themes:
+Foundation provides the [colour palette](https://foundation.zurb.com/sites/docs/global.html) for modifying themes:
 
 {:.base16-dark}
 {% highlight SCSS %}
