@@ -1,7 +1,7 @@
 ---
 chapter: 
   title: Getting Started
-  index: 1.2
+  index: 1.3
 title: Scss Frameworks
 layout: default
 ---

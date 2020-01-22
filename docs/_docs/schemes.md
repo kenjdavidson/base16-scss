@@ -1,7 +1,7 @@
 ---
 chapter: 
   title: Getting Started
-  index: 1.3
+  index: 1.2
 title: Custom Schemes
 layout: default
 ---
