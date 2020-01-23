@@ -50,6 +50,11 @@ baseurl: /base16-scss
 remote_theme: kenjdavidson/jekyll-kb
 markdown: kramdown
 highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+  
 plugins:
   - jekyll-feed
   - jekyll-redirect-from

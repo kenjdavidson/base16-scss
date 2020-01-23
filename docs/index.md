@@ -83,8 +83,10 @@ angular.module('UserModule', [])
 
 **base16-mocha**
 
+Also works with {% raw %}```javascript{% endraw %} 
+
 {:.base16-mocha}
-{% highlight javascript linenos %}
+```javascript
 angular.module('UserModule', [])
   .service('UserService', ['$http', function($http){
     return {
@@ -103,7 +105,7 @@ angular.module('UserModule', [])
       })
     };
   }]);
-{%- endhighlight -%}
+```
 
 ### Scheme Repository
 

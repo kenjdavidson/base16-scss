@@ -193,182 +193,254 @@
   --base0F-dec-g: 0.4117647059;
   --base0F-dec-b: 0.2745098039; }
 
-figure.highlight {
+figure.highlight,
+div.highlighter-rouge {
   font-family: "Source Code Pro", monospace;
   font-size: 0.9em;
   color: var(--base05);
   background-color: var(--base00);
   border: 1px solid var(--base01);
   margin-bottom: 1em; }
-  figure.highlight table.rouge-table {
+  figure.highlight table.rouge-table,
+  div.highlighter-rouge table.rouge-table {
     margin: -10px; }
-  figure.highlight .gutter.gl {
+  figure.highlight .gutter.gl,
+  div.highlighter-rouge .gutter.gl {
     border-right: 1px solid var(--base04); }
-  figure.highlight pre {
+  figure.highlight pre,
+  div.highlighter-rouge pre {
     color: var(--base05);
     background-color: var(--base00);
     border: 0px solid transparent;
     margin: 0px; }
-  figure.highlight .hll {
+  figure.highlight .hll,
+  div.highlighter-rouge .hll {
     background-color: var(--base02); }
-  figure.highlight .c {
+  figure.highlight .c,
+  div.highlighter-rouge .c {
     color: var(--base03);
     font-style: italic; }
-  figure.highlight .err {
+  figure.highlight .err,
+  div.highlighter-rouge .err {
     border: 1px solid var(--base0F); }
-  figure.highlight .k {
+  figure.highlight .k,
+  div.highlighter-rouge .k {
     color: var(--base0E);
     font-weight: bold; }
-  figure.highlight .o {
+  figure.highlight .o,
+  div.highlighter-rouge .o {
     color: var(--base0E);
     font-weight: bold; }
-  figure.highlight .ch {
+  figure.highlight .ch,
+  div.highlighter-rouge .ch {
     color: var(--base03);
     font-style: italic; }
-  figure.highlight .cm {
+  figure.highlight .cm,
+  div.highlighter-rouge .cm {
     color: var(--base03);
     font-style: italic; }
-  figure.highlight .cp {
+  figure.highlight .cp,
+  div.highlighter-rouge .cp {
     color: var(--base0E); }
-  figure.highlight .cpf {
+  figure.highlight .cpf,
+  div.highlighter-rouge .cpf {
     color: var(--base03);
     font-style: italic; }
-  figure.highlight .c1 {
+  figure.highlight .c1,
+  div.highlighter-rouge .c1 {
     color: var(--base03);
     font-style: italic; }
-  figure.highlight .cs {
+  figure.highlight .cs,
+  div.highlighter-rouge .cs {
     color: var(--base03);
     background-color: #fff0f0; }
-  figure.highlight .gd {
+  figure.highlight .gd,
+  div.highlighter-rouge .gd {
     color: var(--base0F); }
-  figure.highlight .ge {
+  figure.highlight .ge,
+  div.highlighter-rouge .ge {
     font-style: italic; }
-  figure.highlight .gr {
+  figure.highlight .gr,
+  div.highlighter-rouge .gr {
     color: var(--base0F); }
-  figure.highlight .gh {
+  figure.highlight .gh,
+  div.highlighter-rouge .gh {
     color: var(--base0D);
     font-weight: bold; }
-  figure.highlight .gi {
+  figure.highlight .gi,
+  div.highlighter-rouge .gi {
     color: var(--base0D); }
-  figure.highlight .go {
+  figure.highlight .go,
+  div.highlighter-rouge .go {
     color: var(--base0D); }
-  figure.highlight .gp {
+  figure.highlight .gp,
+  div.highlighter-rouge .gp {
     color: var(--base0C);
     font-weight: bold; }
-  figure.highlight .gs {
+  figure.highlight .gs,
+  div.highlighter-rouge .gs {
     font-weight: bold; }
-  figure.highlight .gu {
+  figure.highlight .gu,
+  div.highlighter-rouge .gu {
     color: var(--base0D);
     font-weight: bold; }
-  figure.highlight .gt {
+  figure.highlight .gt,
+  div.highlighter-rouge .gt {
     color: var(--base0D); }
-  figure.highlight .kc {
+  figure.highlight .kc,
+  div.highlighter-rouge .kc {
     color: var(--base0A);
     font-weight: bold; }
-  figure.highlight .kd {
+  figure.highlight .kd,
+  div.highlighter-rouge .kd {
     color: var(--base0A);
     font-weight: bold; }
-  figure.highlight .kn {
+  figure.highlight .kn,
+  div.highlighter-rouge .kn {
     color: var(--base0A);
     font-weight: bold; }
-  figure.highlight .kp {
+  figure.highlight .kp,
+  div.highlighter-rouge .kp {
     color: var(--base0E); }
-  figure.highlight .kr {
+  figure.highlight .kr,
+  div.highlighter-rouge .kr {
     color: var(--base0E);
     font-weight: bold; }
-  figure.highlight .kt {
+  figure.highlight .kt,
+  div.highlighter-rouge .kt {
     color: var(--base0E); }
-  figure.highlight .m {
+  figure.highlight .m,
+  div.highlighter-rouge .m {
     color: var(--base09); }
-  figure.highlight .s {
+  figure.highlight .s,
+  div.highlighter-rouge .s {
     color: var(--base0B); }
-  figure.highlight .n {
+  figure.highlight .n,
+  div.highlighter-rouge .n {
     color: var(--base08); }
-  figure.highlight .na {
+  figure.highlight .na,
+  div.highlighter-rouge .na {
     color: var(--base0B); }
-  figure.highlight .nb {
+  figure.highlight .nb,
+  div.highlighter-rouge .nb {
     color: var(--base0D); }
-  figure.highlight .nc {
+  figure.highlight .nc,
+  div.highlighter-rouge .nc {
     color: var(--base0E);
     font-weight: bold; }
-  figure.highlight .no {
+  figure.highlight .no,
+  div.highlighter-rouge .no {
     color: var(--base0A); }
-  figure.highlight .nd {
+  figure.highlight .nd,
+  div.highlighter-rouge .nd {
     color: var(--base0D);
     font-weight: bold; }
-  figure.highlight .ni {
+  figure.highlight .ni,
+  div.highlighter-rouge .ni {
     color: var(--base0D);
     font-weight: bold; }
-  figure.highlight .ne {
+  figure.highlight .ne,
+  div.highlighter-rouge .ne {
     color: var(--base0E); }
-  figure.highlight .nf {
+  figure.highlight .nf,
+  div.highlighter-rouge .nf {
     color: var(--base0D); }
-  figure.highlight .nl {
+  figure.highlight .nl,
+  div.highlighter-rouge .nl {
     color: var(--base0D);
     font-weight: bold; }
-  figure.highlight .nn {
+  figure.highlight .nn,
+  div.highlighter-rouge .nn {
     color: var(--base0D);
     font-weight: bold; }
-  figure.highlight .nt {
+  figure.highlight .nt,
+  div.highlighter-rouge .nt {
     color: var(--base0D);
     font-weight: bold; }
-  figure.highlight .nv {
+  figure.highlight .nv,
+  div.highlighter-rouge .nv {
     color: var(--base0D); }
-  figure.highlight .ow {
+  figure.highlight .ow,
+  div.highlighter-rouge .ow {
     color: var(--base0E);
     font-weight: bold; }
-  figure.highlight .mb {
+  figure.highlight .mb,
+  div.highlighter-rouge .mb {
     color: var(--base09); }
-  figure.highlight .mf {
+  figure.highlight .mf,
+  div.highlighter-rouge .mf {
     color: var(--base09); }
-  figure.highlight .mh {
+  figure.highlight .mh,
+  div.highlighter-rouge .mh {
     color: var(--base09); }
-  figure.highlight .mi {
+  figure.highlight .mi,
+  div.highlighter-rouge .mi {
     color: var(--base09); }
-  figure.highlight .mo {
+  figure.highlight .mo,
+  div.highlighter-rouge .mo {
     color: var(--base09); }
-  figure.highlight .sa {
+  figure.highlight .sa,
+  div.highlighter-rouge .sa {
     color: var(--base0B); }
-  figure.highlight .sb {
+  figure.highlight .sb,
+  div.highlighter-rouge .sb {
     color: var(--base0B); }
-  figure.highlight .sc {
+  figure.highlight .sc,
+  div.highlighter-rouge .sc {
     color: var(--base0B); }
-  figure.highlight .dl {
+  figure.highlight .dl,
+  div.highlighter-rouge .dl {
     color: var(--base0B); }
-  figure.highlight .sd {
+  figure.highlight .sd,
+  div.highlighter-rouge .sd {
     color: var(--base0B);
     font-style: italic; }
-  figure.highlight .s2 {
+  figure.highlight .s2,
+  div.highlighter-rouge .s2 {
     color: var(--base0B); }
-  figure.highlight .se {
+  figure.highlight .se,
+  div.highlighter-rouge .se {
     color: var(--base0B);
     font-weight: bold; }
-  figure.highlight .sh {
+  figure.highlight .sh,
+  div.highlighter-rouge .sh {
     color: var(--base0B); }
-  figure.highlight .si {
+  figure.highlight .si,
+  div.highlighter-rouge .si {
     color: var(--base0C);
     font-style: italic; }
-  figure.highlight .sx {
+  figure.highlight .sx,
+  div.highlighter-rouge .sx {
     color: var(--base0C); }
-  figure.highlight .sr {
+  figure.highlight .sr,
+  div.highlighter-rouge .sr {
     color: var(--base0C); }
-  figure.highlight .s1 {
+  figure.highlight .s1,
+  div.highlighter-rouge .s1 {
     color: var(--base0B); }
-  figure.highlight .ss {
+  figure.highlight .ss,
+  div.highlighter-rouge .ss {
     color: var(--base0B); }
-  figure.highlight .bp {
+  figure.highlight .bp,
+  div.highlighter-rouge .bp {
     color: var(--base0E); }
-  figure.highlight .fm {
+  figure.highlight .fm,
+  div.highlighter-rouge .fm {
     color: var(--base0C); }
-  figure.highlight .vc {
+  figure.highlight .vc,
+  div.highlighter-rouge .vc {
     color: var(--base08); }
-  figure.highlight .vg {
+  figure.highlight .vg,
+  div.highlighter-rouge .vg {
     color: var(--base08); }
-  figure.highlight .vi {
+  figure.highlight .vi,
+  div.highlighter-rouge .vi {
     color: var(--base08); }
-  figure.highlight .vm {
+  figure.highlight .vm,
+  div.highlighter-rouge .vm {
     color: var(--base0D); }
-  figure.highlight .il {
+  figure.highlight .il,
+  div.highlighter-rouge .il {
     color: var(--base09); }
 
 .highlighter-rouge {

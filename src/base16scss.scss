@@ -19,7 +19,8 @@ $base16schemes: map-merge($base16default, $base16schemes);
 /// css variables.  This allows wrapping of each highlight section with a 
 /// different selector which has been updated.  For example:
 /// <div class="base16github">{% highlight java linenos %}{% endhighlight %}</div>
-figure.highlight {
+figure.highlight,
+div.highlighter-rouge {
 	font-family: $highlight-font-family;
 	font-size: $highlight-font-size;
 	color: var(--base05);
