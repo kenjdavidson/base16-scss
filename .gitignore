@@ -3,6 +3,7 @@
 .classpath
 .settings/
 .vscode/
+dist/
 
 # Build
 node_modules/
