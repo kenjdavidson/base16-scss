@@ -4,6 +4,7 @@
   "description": "Base16 Scss builder and samples",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "preversion": "grunt",
     "postversion": "git push && git push --tags && rm -rf build/temp && npm publish"
   },
   "author": "Kenneth Davidson",
@@ -23,5 +24,8 @@
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }
