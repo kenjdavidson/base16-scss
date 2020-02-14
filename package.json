@@ -1,6 +1,6 @@
 {
   "name": "@kenjdavidson/base16-scss",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Base16 Scss builder and samples",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
