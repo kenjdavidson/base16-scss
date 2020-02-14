@@ -3,7 +3,9 @@ layout: default
 title: What is Base16 Scss
 ---
 
-A [SCSS](https://sass-lang.com/) implementation of the [Base16](https://github.com/chriskempson/base16) builder [guidelines](https://github.com/chriskempson/base16/blob/master/styling.md).   Apply any number or configuration of schemes to your [Rouge](http://rouge.jneen.net/) highlight or apply to your full site by configuring framework variables to scheme colours.
+A [SCSS](https://sass-lang.com/) implementation of the [Base16](https://github.com/chriskempson/base16) builder [guidelines](https://github.com/chriskempson/base16/blob/master/styling.md).   With built in support for [Rouge](http://rouge.jneen.net/) and [PrismJS](https://prismjs.com/) highlighters.
+
+Using the builder implementations laid out by Base16 all the appropriate SCSS and CSS variables are created.  If importing `rouge.scss` or `prismjs.scss` the created styles are applied. 
 
 ### Default Schemes
 

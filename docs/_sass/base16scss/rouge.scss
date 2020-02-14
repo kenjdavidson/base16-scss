@@ -1,0 +1,271 @@
+/// Set styles for figures.highlight and code.highlight to use the specified
+/// css variables.  This allows wrapping of each highlight section with a
+/// different selector which has been updated.  For example:
+/// <div class="base16github">{% highlight java linenos %}{% endhighlight %}</div>
+figure.highlight,
+div.highlighter-rouge {
+  font-family: $highlight-font-family;
+  font-size: $highlight-font-size;
+  color: var(--base05);
+  background-color: var(--base00);
+  border: 1px solid var(--base01);
+  margin-bottom: 1em;
+  border-radius: $highlight-border-radius;
+
+  table.rouge-table {
+    margin: -10px;
+  }
+
+  .gutter.gl {
+    border-right: 1px solid var(--base04);
+  }
+
+  pre {
+    color: var(--base05);
+    background-color: var(--base00);
+    border: 0px solid transparent;
+    margin: 0px;
+  }
+
+  .hll {
+    background-color: var(--base02);
+  }
+
+  .c {
+    color: var(--base03);
+    font-style: italic;
+  } /// Comment
+  .err {
+    border: 1px solid var(--base0F);
+  } /// Error
+  .k {
+    color: var(--base0E);
+    font-weight: bold;
+  } /// Keyword
+  .o {
+    color: var(--base0E);
+    font-weight: bold;
+  } /// Operator
+  .ch {
+    color: var(--base03);
+    font-style: italic;
+  } /// Comment.Hashbang
+  .cm {
+    color: var(--base03);
+    font-style: italic;
+  } /// Comment.Multiline
+  .cp {
+    color: var(--base0E);
+  } /// Comment.Preproc
+  .cpf {
+    color: var(--base03);
+    font-style: italic;
+  } /// Comment.PreprocFile
+  .c1 {
+    color: var(--base03);
+    font-style: italic;
+  } /// Comment.Single
+  .cs {
+    color: var(--base03);
+    background-color: #fff0f0;
+  } /// Comment.Special
+  .gd {
+    color: var(--base0F);
+  } /// Generic.Deleted
+  .ge {
+    font-style: italic;
+  } /// Generic.Emph
+  .gr {
+    color: var(--base0F);
+  } /// Generic.Error
+  .gh {
+    color: var(--base0D);
+    font-weight: bold;
+  } /// Generic.Heading
+  .gi {
+    color: var(--base0D);
+  } /// Generic.Inserted
+  .go {
+    color: var(--base0D);
+  } /// Generic.Output
+  .gp {
+    color: var(--base0C);
+    font-weight: bold;
+  } /// Generic.Prompt
+  .gs {
+    font-weight: bold;
+  } /// Generic.Strong
+  .gu {
+    color: var(--base0D);
+    font-weight: bold;
+  } /// Generic.Subheading
+  .gt {
+    color: var(--base0D);
+  } /// Generic.Traceback
+  .kc {
+    color: var(--base0A);
+    font-weight: bold;
+  } /// Keyword.Constant
+  .kd {
+    color: var(--base0A);
+    font-weight: bold;
+  } /// Keyword.Declaration
+  .kn {
+    color: var(--base0A);
+    font-weight: bold;
+  } /// Keyword.Namespace
+  .kp {
+    color: var(--base0E);
+  } /// Keyword.Pseudo
+  .kr {
+    color: var(--base0E);
+    font-weight: bold;
+  } /// Keyword.Reserved
+  .kt {
+    color: var(--base0E);
+  } /// Keyword.Type
+  .m {
+    color: var(--base09);
+  } /// Literal.Number
+  .s {
+    color: var(--base0B);
+  } /// Literal.String
+  .n {
+    color: var(--base08);
+  } /// Name
+  .na {
+    color: var(--base0B);
+  } /// Name.Attribute
+  .nb {
+    color: var(--base0D);
+  } /// Name.Builtin
+  .nc {
+    color: var(--base0E);
+    font-weight: bold;
+  } /// Name.Class
+  .no {
+    color: var(--base0A);
+  } /// Name.Constant
+  .nd {
+    color: var(--base0D);
+    font-weight: bold;
+  } /// Name.Decorator
+  .ni {
+    color: var(--base0D);
+    font-weight: bold;
+  } /// Name.Entity
+  .ne {
+    color: var(--base0E);
+  } /// Name.Exception
+  .nf {
+    color: var(--base0D);
+  } /// Name.Function
+  .nl {
+    color: var(--base0D);
+    font-weight: bold;
+  } /// Name.Label
+  .nn {
+    color: var(--base0D);
+    font-weight: bold;
+  } /// Name.Namespace
+  .nt {
+    color: var(--base0D);
+    font-weight: bold;
+  } /// Name.Tag
+  .nv {
+    color: var(--base0D);
+  } /// Name.Variable
+  .ow {
+    color: var(--base0E);
+    font-weight: bold;
+  } /// Operator.Word
+  .w {
+  } /// Text.Whitespace
+  .mb {
+    color: var(--base09);
+  } /// Literal.Number.Bin
+  .mf {
+    color: var(--base09);
+  } /// Literal.Number.Float
+  .mh {
+    color: var(--base09);
+  } /// Literal.Number.Hex
+  .mi {
+    color: var(--base09);
+  } /// Literal.Number.Integer
+  .mo {
+    color: var(--base09);
+  } /// Literal.Number.Oct
+  .sa {
+    color: var(--base0B);
+  } /// Literal.String.Affix
+  .sb {
+    color: var(--base0B);
+  } /// Literal.String.Backtick
+  .sc {
+    color: var(--base0B);
+  } /// Literal.String.Char
+  .dl {
+    color: var(--base0B);
+  } /// Literal.String.Delimiter
+  .sd {
+    color: var(--base0B);
+    font-style: italic;
+  } /// Literal.String.Doc
+  .s2 {
+    color: var(--base0B);
+  } /// Literal.String.Double
+  .se {
+    color: var(--base0B);
+    font-weight: bold;
+  } /// Literal.String.Escape
+  .sh {
+    color: var(--base0B);
+  } /// Literal.String.Heredoc
+  .si {
+    color: var(--base0C);
+    font-style: italic;
+  } /// Literal.String.Interpol
+  .sx {
+    color: var(--base0C);
+  } /// Literal.String.Other
+  .sr {
+    color: var(--base0C);
+  } /// Literal.String.Regex
+  .s1 {
+    color: var(--base0B);
+  } /// Literal.String.Single
+  .ss {
+    color: var(--base0B);
+  } /// Literal.String.Symbol
+  .bp {
+    color: var(--base0E);
+  } /// Name.Builtin.Pseudo
+  .fm {
+    color: var(--base0C);
+  } /// Name.Function.Magic
+  .vc {
+    color: var(--base08);
+  } /// Name.Variable.Class
+  .vg {
+    color: var(--base08);
+  } /// Name.Variable.Global
+  .vi {
+    color: var(--base08);
+  } /// Name.Variable.Instance
+  .vm {
+    color: var(--base0D);
+  } /// Name.Variable.Magic
+  .il {
+    color: var(--base09);
+  } /// Literal.Number.Integer.Long
+}
+
+/// Inline routing defined using `single ticks` will be displayed in Jekyll with a
+/// highlighter-rouge class.
+.highlighter-rouge {
+  font-family: $highlight-font-family;
+  color: var(--base05);
+  background-color: var(--base00);
+  padding: 2px 0.25em;
+}

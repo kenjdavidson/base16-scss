@@ -1,10 +1,11 @@
 ---
 chapter: 
-  title: Getting Started
-  index: 1.3
+  title: Examples
+  index: 2.1
 title: Scss Frameworks
 layout: default
 ---
+
 If you're using a (Sass built) CSS framework like [Bootstrap](https://getbootstrap.com/), [Foundation](https://foundation.zurb.com/sites/docs/sass.html), [Sierra CSS](https://sierra-library.github.io/), etc. there is a constant theme of overriding the themes default color values:
 
 ## Bootstrap 

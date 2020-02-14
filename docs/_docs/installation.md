@@ -80,7 +80,7 @@ $base16-darklight: (
 
 $base16schemes: ('.base16-dark-light', $base16-darklight);
 
-@import "../base16-scss/base16scss";
+@import "~@kenjdavidson/base16-scss/base16scss";
 {% endhighlight %}
 
 #### CSS Variables
@@ -282,5 +282,21 @@ By using the above code not only will the Scss variables be available, but the f
     --base0F-dec-g: 0.4117647059;
     --base0F-dec-b: 0.2745098039;
 }
+{% endhighlight %}
+
+#### Highlight Libraries
+
+The original implementation was specific to Rouge - though it's made sense to allow applying the Base16 template to other highlighting libraries. 
+
+##### Rouge
+
+{% highlight scss %}
+@import "~@kenjdavidson/base16-scss/rouge";
+{% endhighlight %}
+
+##### PrismJS
+
+{% highlight scss %}
+@import "~@kenjdavidson/base16-scss/prismjs";
 {% endhighlight %}
 

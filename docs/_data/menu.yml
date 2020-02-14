@@ -2,7 +2,11 @@
   links:
   - doc: installation.md
   - doc: schemes.md
-  - doc: examples.md
+- title: Examples
+  links:
+  - doc: example-framework.md
+  - doc: example-rouge.md
+  - doc: example-prismjs.md
 
 - title: Links
   links:
