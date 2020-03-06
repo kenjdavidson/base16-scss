@@ -1,6 +1,9 @@
 # Base16 Scss
 
-SCSS implementation of Base16 architecture [https://github.com/chriskempson/base16](https://github.com/chriskempson/base16) planned for use with Jekyll [https://jekyllrb.com/docs/liquid/tags/](https://jekyllrb.com/docs/liquid/tags/) highlight; although it could be used with any web project with styles built off SCSS.
+SCSS implementation of Base16 architecture [https://github.com/chriskempson/base16](https://github.com/chriskempson/base16).  Originally planned for use with Jekyll/Rouge highlight blocks, it's been expanded to provide:
+- Generic css/theming based on the Base16 architecture
+- Available support for Jekyll/Rouge
+- Available support for PrismJS
 
 ## Installation
 
